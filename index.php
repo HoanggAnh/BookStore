@@ -30,7 +30,7 @@ include 'config.php';
           </a>
           <!-- Dropdown menu -->
           <ul class="dropdown-menu active" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">NXB Trẻ</a></li>
+            <li><a class="dropdown-item" href="#">NXB Trẻ T</a></li>
             <li><a class="dropdown-item" href="#">NXB Tổng hợp HCM</a></li>
             <li><a class="dropdown-item" href="#">NXB Thế Giới</a></li>
           </ul>
