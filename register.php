@@ -1,8 +1,10 @@
 <?php
-include 'header.php';
-// include 'config.php';
+include 'config.php';
 ?>
+
 <link rel="stylesheet" href="css/style.css">
+
+
 <section class="vh-100 bg-image" style="background-image: url('https://mdbootstrap.com/img/Photos/new-templates/search-box/img4.jpg');">
   <div class="mask d-flex align-items-center h-100 gradient-custom-3">
     <div class="container h-100">

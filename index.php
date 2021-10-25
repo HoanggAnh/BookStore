@@ -1,5 +1,6 @@
 <?php
 include 'header.php';
+include 'navh.php';
 include 'config.php';
 ?>
 <main style="background-color: #f7f7ff">
@@ -140,7 +141,8 @@ include 'config.php';
 </main>
 
 
-
 <?php
 include 'footer.php';
 ?>
+
+
