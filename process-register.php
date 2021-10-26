@@ -9,8 +9,7 @@ $ConfirmPassword ="";
 if(isset($_POST['process-register']))
 {
     require 'config.php';
-    $Firstname  = $_POST['First name'];
-    $Lastname = $_POST['Last name'];
+    $Fullname  = $_POST['Full name'];
     $Email = $_POST['Email'];
     $Phonenumber = $_POST['Phone number']
     $Password = $_POST['Password'];

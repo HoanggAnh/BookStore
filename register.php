@@ -205,12 +205,9 @@ include 'config.php';
                         <form class="sign-up">
                             <h2 class="heading mb-4" style="color: lavender">Registration form</h2>
                             <hr>
-                            <div class="form-group-spe fone mt-2">
+                            <div class="form-group fone mt-2">
                                 <div class="form-item">
-                                    <p>First name</p> <input type="name" class=" form-control" placeholder="First name">
-                                </div>
-                                <div class="form-item">
-                                    <p>Last name</p> <input type="name" class=" form-control" placeholder="Last name">
+                                    <p>Full name</p> <input type="name" class=" form-control" placeholder="Full name">
                                 </div>
                             </div>
                             <div class="form-group fone mt-2">
