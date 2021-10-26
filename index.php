@@ -26,7 +26,7 @@ include 'config.php';
             <div>
               <i class="fas fa-book fa-lg mb-1"></i>
             </div>
-             Nhà xuất bản
+            Publishing House
           </a>
           <!-- Dropdown menu -->
           <ul class="dropdown-menu active" aria-labelledby="navbarDropdownMenuLink">
@@ -40,7 +40,7 @@ include 'config.php';
             <div>
             <i class="fas fa-shopping-cart fa-lg mb-1"></i>
             </div>
-             Giỏ hàng
+             Cart Row
           </a>
         </li>
         <li class="nav-item text-center mx-2 mx-lg-1">
@@ -48,7 +48,7 @@ include 'config.php';
             <div>
               <i class="fas fa-envelope fa-lg mb-1"></i>
             </div>
-             Liên hệ
+            Contact
           </a>
         </li>
       </ul>
@@ -68,9 +68,9 @@ include 'config.php';
       <ul class="navbar-nav ms-auto d-flex flex-row mt-3 mt-lg-0">
          <!-- Search form -->
       <form class="d-flex input-group w-auto ms-lg-3 my-3 my-lg-0">
-        <input type="search" class="form-control" placeholder="Nhập tên sách..." aria-label="Search" />
+        <input type="search" class="form-control" placeholder="Enter a book name..." aria-label="Search" />
         <button class="btn btn-outline-white" type="button" data-mdb-ripple-color="dark"><i class="fas fa-search"></i>
-          Tìm kiếm
+          Search
         </button>
       </form>
 
