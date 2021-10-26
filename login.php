@@ -1,63 +1,81 @@
 <?php
 include 'header.php';
-// include 'config.php';
+include 'config.php';
 ?>
-<link rel="stylesheet" href="css/style.css">
-<section class="vh-100 bg-image" style="background-image: url('https://mdbootstrap.com/img/Photos/new-templates/search-box/img4.jpg');">
-  <div class="mask d-flex align-items-center h-100 gradient-custom-3">
-    <div class="container h-100">
-      <div class="row d-flex justify-content-center align-items-center h-100">
-        <div class="col-12 col-md-9 col-lg-7 col-xl-6">
-          <div class="card" style="border-radius: 15px;">
-            <div class="card-body p-5">
-              <h2 class="text-uppercase text-center mb-5">Create an account</h2>
 
-              <form>
+<main>
+    <section class="vh-100 container-fluid">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6 text-black">
 
-                <div class="form-outline mb-4">
-                  <input type="text" id="form3Example1cg" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example1cg">Your Name</label>
+                    <div class="px-5 ms-xl-4">
+                        <i class="fas fa-crow fa-2x me-3 pt-5 mt-xl-4" style="color: #709085;"></i>
+                        <span class="h1 fw-bold mb-0">E-Contacts</span>
+                    </div>
+
+                    <div class="d-flex align-items-center h-custom-2 px-5 ms-xl-4 mt-5 pt-5 pt-xl-0 mt-xl-n5">
+
+                        <form style="width: 23rem;">
+
+                            <h3 class="fw-normal mb-3 pb-3" style="letter-spacing: 0.5px; color: #ff6b35;">Please login to your account</h3>
+                            <!-- Interface LOGIN connect in here -->
+                            <form action="index.php" method="post">
+                                <div class="form-outline mb-4">
+                                    <input type="email" name="textEmail" placeholder="Email address" class="form-control form-control-lg" />
+                                </div>
+
+                                <div class="form-outline mb-4">
+                                    <input type="password" name="txtPass" placeholder="Password" class="form-control form-control-lg" />
+                                </div>
+
+                                <div class="pt-1 mb-4">
+                                <a href="home.php" class="btn">Login</a>
+                                </div>
+
+                                <p class="small mb-5 pb-lg-2"><a class="text-muted" href="#!">Forgot password?</a></p>
+                                <p>Don't have an account? <a href="sign-up.php" class="link-info"><button type="button" class="btn btn-outline-light btn-rounded">
+                                            Sign up!
+                                        </button></a></p>
+                            </form>
+                            <!-- End Interface LOGIN -->
+                            <div class="clearfix"></div>
+                        </form>
+
+                    </div>
+
                 </div>
-
-                <div class="form-outline mb-4">
-                  <input type="email" id="form3Example3cg" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example3cg">Your Email</label>
+                <div class="col-sm-6 px-0 d-none d-sm-block">
+                    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="https://i.pinimg.com/originals/37/0e/8d/370e8dadb8ab358874e3d09dceda1303.jpg" alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://png.pngtree.com/background/20210709/original/pngtree-h5-ad-geometric-red-picture-image_960443.jpg" alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="https://i.pinimg.com/originals/2c/80/61/2c806138e555507c468766814bccb7c0.jpg" alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <!-- <img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-login-form/img3.jpg" alt="Login image" class="w-100 vh-100" style="object-fit: cover; object-position: left;">
+      </div> -->
                 </div>
-
-                <div class="form-outline mb-4">
-                  <input type="password" id="form3Example4cg" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example4cg">Password</label>
-                </div>
-
-                <div class="form-outline mb-4">
-                  <input type="password" id="form3Example4cdg" class="form-control form-control-lg" />
-                  <label class="form-label" for="form3Example4cdg">Repeat your password</label>
-                </div>
-
-                <div class="form-check d-flex justify-content-center mb-5">
-                  <input
-                    class="form-check-input me-2"
-                    type="checkbox"
-                    value=""
-                    id="form2Example3cg"
-                  />
-                  <label class="form-check-label" for="form2Example3g">
-                    I agree all statements in <a href="#!" class="text-body"><u>Terms of service</u></a>
-                  </label>
-                </div>
-
-                <div class="d-flex justify-content-center">
-                  <button type="button" class="btn btn-success btn-block btn-lg gradient-custom-4 text-body">Register</button>
-                </div>
-
-                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!" class="fw-bold text-body"><u>Login here</u></a></p>
-
-              </form>
-
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
+</main>
+
