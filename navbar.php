@@ -8,7 +8,7 @@
       <!-- Left links -->
       <ul class="navbar-nav me-auto d-flex flex-row mt-3 mt-lg-0">
         <li class="nav-item text-center mx-2 mx-lg-1">
-          <a class="nav-link-c active" aria-current="page" href="#!">
+          <a class="nav-link-c active" aria-current="page" href="index.php">
             <div>
               <i class="fas fa-home fa-lg mb-1"></i>
             </div>
@@ -31,7 +31,7 @@
           </ul>
         </li>
         <li class="nav-item text-center mx-2 mx-lg-1">
-        <a class="nav-link-c active" href="#!">
+        <a class="nav-link-c active" href="cart.php">
             <div>
             <i class="fas fa-shopping-cart fa-lg mb-1"></i>
             </div>
@@ -39,7 +39,7 @@
           </a>
         </li>
         <li class="nav-item text-center mx-2 mx-lg-1">
-        <a class="nav-link-c active" href="#!">
+        <a class="nav-link-c active" href="contact.php">
             <div>
               <i class="fas fa-envelope fa-lg mb-1"></i>
             </div>
