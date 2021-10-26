@@ -26,7 +26,7 @@ include 'config.php';
             <div>
               <i class="fas fa-book fa-lg mb-1"></i>
             </div>
-             Nhà xuất bản
+            Publishing House.
           </a>
           <!-- Dropdown menu -->
           <ul class="dropdown-menu active" aria-labelledby="navbarDropdownMenuLink">
@@ -40,7 +40,7 @@ include 'config.php';
             <div>
             <i class="fas fa-shopping-cart fa-lg mb-1"></i>
             </div>
-             Giỏ hàng
+             Cart Row
           </a>
         </li>
         <li class="nav-item text-center mx-2 mx-lg-1">
@@ -48,7 +48,7 @@ include 'config.php';
             <div>
               <i class="fas fa-envelope fa-lg mb-1"></i>
             </div>
-             Liên hệ
+             Contact
           </a>
         </li>
       </ul>
