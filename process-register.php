@@ -11,7 +11,7 @@ if(isset($_POST['process-register']))
     require 'config.php';
     $Fullname  = $_POST['Fullname'];
     $Email = $_POST['email'];
-    $Phonenumber = $_POST['phonenumber']
+    $Phonenumber = $_POST['phonenumber'];
     $Password = $_POST['password'];
     $ConfirmPassword = $_POST['repass'];
     if($ConfirmPassword != $Password  )
