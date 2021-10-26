@@ -37,12 +37,12 @@ include 'config.php';
 
 <div class="container">
   <div class="row">
-    <h2>Sách đang khuyến mãi</h2>
+    <h2>Books on sale</h2>
     <hr>
 
 
 
-    <h2>Sản phẩm mới </h2>
+    <h2>New Books</h2>
     <hr>
     
 
