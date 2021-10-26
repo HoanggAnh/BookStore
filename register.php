@@ -216,6 +216,9 @@ include 'config.php';
                             <div class="form-group fone mt-2">
                                 <p>Email</p> <input type="email" class=" form-control" placeholder="Email">
                             </div>
+                            <div class = "form-group fone mt-2">
+                                <p>Phone number</p> <input type = "dt" class = "form-control" placeholder = "Phone number">
+                             </div>
                             <div class="form-group fone mt-2">
                                 <p>Password</p> <input type="password" class="form-control" placeholder="Password">
                             </div>
