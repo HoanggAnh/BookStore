@@ -34,7 +34,7 @@ if(isset($_POST['process-register']))
             $kqdk = "Đăng ký không thành công xin hay kiểm tra lại thông tin";
         }
     }
-
+      header (location: action="index.php" method="post");
     
     mysqli_close($conn);
 }
