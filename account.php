@@ -24,7 +24,7 @@
                 <div class="signin-content">
                     <div class="signin-form" style="padding-top:60px">
                         <h2 class="form-title">Log In</h2>
-                        <form method="POST" class="register-form" id="login-form">
+                        <form method="POST" class="login-form" id="login-form">
                             <div class="form-group">
                                 <label for="Email"><i class="zmdi zmdi-account material-icons-name" style="margin-left:10px"></i></label>
                                 <input type="text" name="your_name" id="your_name" placeholder="Email" />
