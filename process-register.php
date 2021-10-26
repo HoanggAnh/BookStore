@@ -32,9 +32,11 @@ if(isset($_POST['process-register']))
             $kqdk = "Đăng ký thành công";
         } else {
             $kqdk = "Đăng ký không thành công xin hay kiểm tra lại thông tin";
+            header("Location:index.php");
+    
         }
+        
     }
-    header("Location:index.php");
     
     mysqli_close($conn);
 }
