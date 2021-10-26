@@ -232,7 +232,7 @@ include 'config.php';
                                 <p>Google</p>
                             </div>
                         </div>
-                        <p class="re-login">Already have account ? <a href="index.php" id="login-open2">Login</a> </p>
+                        <p class="re-login">Already have account ? <a href="login.php" id="login-open2">Login</a> </p>
                     </div>
 
                     <div class="col-sm-6 px-0 d-none d-sm-block">
