@@ -1,6 +1,7 @@
 <?php
 $Fullname = "" ;
 $Email = "" ;
+$Phonenumber = "" ;
 $Password= "";
 $kqdk ="";
 $ConfirmPassword ="";
@@ -8,11 +9,12 @@ $ConfirmPassword ="";
 if(isset($_POST['process-register']))
 {
     require 'config.php';
-    $Firstname  = $_POST['Firstname'];
-    $Lastname = $_POST['Lastname'];
-    $Email = $_POST['email'];
-    $Password = $_POST['password'];
-    $ConfirmPassword = $_POST['repass'];
+    $Firstname  = $_POST['First name'];
+    $Lastname = $_POST['Last name'];
+    $Email = $_POST['Email'];
+    $Phonenumber = $_POST['Phone number']
+    $Password = $_POST['Password'];
+    $ConfirmPassword = $_POST['Password'];
     if($ConfirmPassword != $Password  )
     {
         $kqdk = "Mật khẩu nhập lại không chính xác";
@@ -25,7 +27,7 @@ if(isset($_POST['process-register']))
         if (mysqli_query($conn, $sql)) {
             $Fullname = "" ;
             $Email = "" ;
-            $dt= "";
+            $Phonenumber= "";
             $Password= "";
             $ConfirmPassword ="";
             $kqdk = "Đăng ký thành công";
