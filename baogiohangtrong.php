@@ -15,23 +15,13 @@ $name ="Điện thoại";
 	include "navbar.php"
 	?>
 	
-	<!--//////////////////////////////////////////////////-->
-	<!--///////////////////Contact Page///////////////////-->
-	<!--//////////////////////////////////////////////////-->
+	<hr style=" border: 1.5px solid">
 	<div id="page-content" class="single-page">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<ul class="breadcrumb">
-						<li><a href="index.php">Home</a></li>
-						<li>Cart</li>
-					</ul>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-12">
-					<div class="heading"><h2 style="color:red">Your cart doesn't have any books. Please add them to your cart !</h2></div>
-					<p><h5><a href="/index.php">Back to Home.</a></h5></p>
+					<div class="heading"><h2 style="color:tomato"><i class="fas fa-shopping-cart"></i> Your cart doesn't have any books. Please add them to your cart !</h2></div>
+					<p><h5><a href="index.php" class="nav-link-c"><i class="fas fa-sign-out-alt"></i> Back to Home.</a></h5></p>
 				</div>
 			</div>
 		</div>

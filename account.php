@@ -10,7 +10,7 @@ session_start();
 	include "header.php"
 	?>
 <?php
-$title ="Shop huy";
+$title ="Threefairy Shop";
 $name ="Điện thoai";
 ?>
 <?php 
