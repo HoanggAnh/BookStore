@@ -1,16 +1,46 @@
-<!doctype html>
-<html lang="en">
+	
 
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<header class="container" >
+		<div class="row">
+			<div class="col-md-4" style="margin-bottom:25px">
+				<div id="logo"><h5>NHÀ SÁCH ONLINE</h5></div>
+			</div>
+			<div class="col-md-4">
+				<form class="form-search" method="GET" action="timkiem.php">  
+					<input type="text"  class="input-medium search-query" name="txttimkiem" required>  
+					<button type="submit" name="tk" class="btn"><span class="glyphicon glyphicon-search"></span></button>  
+				</form>
+			</div>
+			<div class="col-md-4">
+				<div id="cart"><a class="btn btn-1" href="cart.php"><span class="glyphicon glyphicon-shopping-cart" ></span>Giỏ hàng (<?php
+			$ok=1;
+			 if(isset($_SESSION['cart']))
+			 {
+				 foreach($_SESSION['cart'] as $key => $value)
+				 {
+					 if(isset($key))
+					 {
+						$ok=2;
+					 }
+				 }
+			 }
+			
+			 if($ok == 2)
+			 {
+				echo count($_SESSION['cart']);
+			 }
+			else
+			{
+				echo   "0";
+			}
+			
+			
+			?>)</a></div>
+			</div>
+		</div>
+	</header>
+	
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
 
-    <title>Book Store</title>
-</head>
+
+
