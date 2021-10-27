@@ -7,10 +7,6 @@ session_start();
 <?php 
 	include "header.php"
 	?>
-<?php
-$title ="Shop huy";
-$name ="Điện thoai";
-?>
 <?php 
 	include "navh.php"
     ?>
@@ -25,7 +21,7 @@ $name ="Điện thoai";
 $tk = "" ;
 $mk = "" ;
 $kq = "";
-if(isset($_POST['submit']))
+if(isset($_POST['login-form']))
 {
     require 'config.php';
     $tk = $_POST['txtus'] ;
@@ -57,12 +53,11 @@ $mk= "";
 $kqdk ="";
 $repass ="";
 
-if(isset($_POST['dangky']))
+if(isset($_POST['register-form']))
 {
     require 'config.php';
     $name  = $_POST['fullname'] ;
     $email = $_POST['email'];
-    $dt = $_POST['phone'];
     $mk = $_POST['password'];
     $repass = $_POST['repass'];
     if($repass != $mk  )
@@ -77,7 +72,6 @@ if(isset($_POST['dangky']))
         if (mysqli_query($conn, $sql)) {
             $name = "" ;
             $email = "" ;
-            $dt= "";
             $mk= "";
             $repass ="";
             $kqdk = "Đăng ký thành công";
