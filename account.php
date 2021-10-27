@@ -1,3 +1,5 @@
+
+
 <?php
 ob_start();
 session_start();
@@ -5,21 +7,17 @@ session_start();
 
 
 <?php 
-	include "head.php"
+	include "header.php"
 	?>
 <?php
 $title ="Shop huy";
 $name ="Điện thoai";
 ?>
 <?php 
-	include "top.php"
+	include "navh.php";
+    include "navbar.php";
     ?>
-    <?php 
-	include "header.php"
-	?>
-	<?php 
-	include "navigation.php"
-	?>
+
 
 
 	<!-- Account -->
@@ -31,7 +29,7 @@ $mk = "" ;
 $kq = "";
 if(isset($_POST['submit']))
 {
-    require 'inc/myconnect.php';
+    require 'config.php';
     $tk = $_POST['txtus'] ;
     $mk = $_POST['txtem'];
     $sql="SELECT * FROM loginuser  where email = '$tk'  and matkhau = '$mk'  ";
@@ -63,7 +61,7 @@ $repass ="";
 
 if(isset($_POST['dangky']))
 {
-    require 'inc/myconnect.php';
+    require 'config.php';
     $name  = $_POST['fullname'] ;
     $email = $_POST['email'];
     $dt = $_POST['phone'];
@@ -94,27 +92,20 @@ if(isset($_POST['dangky']))
     mysqli_close($conn);
 }
 ?>
+<hr style=" border: 1.5px solid">
 	<div id="page-content" class="single-page">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-12">
-					<ul class="breadcrumb">
-						<li><a href="index.php">Home</a></li>
-						<li><a href="account.php">Account</a></li>
-					</ul>
-				</div>
-			</div>
-			<div class="row">
 				<div class="col-md-6">
-					<div class="heading"><h2>Đăng nhập</h2></div>
+					<div class="heading" style="margin-bottom:15px"><h2>Log In</h2></div>
 					<form name="form1" id="ff1" method="POST" action="#">
 						<div class="form-group">
-							<input type="email" class="form-control" placeholder="Email" name="txtus" required value="">
+							<input type="email" class="form-control" placeholder="Email" name="txtus" required value="" style="margin-bottom:10px; width: 400px">
 						</div>
 						<div class="form-group">
-							<input type="password" class="form-control" placeholder="Mật khẫu" name="txtem"required value="">
+							<input type="password" class="form-control" placeholder="Mật khẫu" name="txtem"required value="" style="margin-bottom:10px; width: 400px">
 						</div>
-						<button type="submit" name="submit" class="btn btn-1" name="login" id="login">Đăng nhập</button>
+						<button type="submit" name="submit" class="btn btn-1" name="login" id="login">Login</button>
 						<P style="color:red"><?php echo $kq; ?></p>
 						<a href="#"></a>
 						<br>
@@ -122,24 +113,24 @@ if(isset($_POST['dangky']))
 					</form>
 				</div>
 				<div class="col-md-6">
-					<div class="heading"><h2> Đăng ký tài khoản</h2></div>
+					<div class="heading" style="margin-bottom:15px"><h2>Sign Up</h2></div>
 					<form name="form2" id="ff2" method="post" action="#">
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="Họ Tên" name="fullname" id="firstname" value="<?php echo $name;?>" required >
+							<input type="text" class="form-control" placeholder="Họ Tên" name="fullname" id="firstname" value="<?php echo $name;?>" required style="margin-bottom:10px">
 						</div>
 						<div class="form-group">
-							<input type="email" class="form-control" placeholder="Email" name="email" id="email"  value="<?php echo $email;?>" required>
+							<input type="email" class="form-control" placeholder="Email" name="email" id="email"  value="<?php echo $email;?>" required style="margin-bottom:10px">
 						</div>
 						<div class="form-group">
-						<input type="number" class="form-control" placeholder="Điện thoại" name="phone" id="phone" value="<?php echo $dt;?>" required >
+						<input type="number" class="form-control" placeholder="Điện thoại" name="phone" id="phone" value="<?php echo $dt;?>" required style="margin-bottom:10px">
 						</div>
 						<div class="form-group">
-						<input type="password" class="form-control" placeholder="Mật khẩu" name="password" id="password"  value="<?php echo $mk;?>"required >
+						<input type="password" class="form-control" placeholder="Mật khẩu" name="password" id="password"  value="<?php echo $mk;?>"required style="margin-bottom:10px">
 						</div>
 						<div class="form-group">
-						<input type="password" class="form-control" placeholder="Mật khẩu nhập lại" name="repass" id="repass" value="<?php echo $repass;?>" required >
+						<input type="password" class="form-control" placeholder="Mật khẩu nhập lại" name="repass" id="repass" value="<?php echo $repass;?>" required style="margin-bottom:10px">
 						</div>
-						<button type="submit" name="dangky" class="btn btn-1">Đăng kí</button>
+						<button type="submit" name="dangky" class="btn btn-1" style="margin-bottom:50px">Register</button>
 						<P style="color:red"><?php echo $kqdk; ?></p>
 					</form>
 				</div>
@@ -152,3 +143,8 @@ if(isset($_POST['dangky']))
 </body>
 </html>
 <?php ob_end_flush(); ?>
+
+
+
+
+
