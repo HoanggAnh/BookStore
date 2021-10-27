@@ -3,7 +3,7 @@ session_start();
 $tk = "" ;
 $mk = "" ;
 $kq = "";
-if(isset($_POST['signin']))
+if(isset($_POST['submit']))
 {
     require 'config.php';
     $tk = $_POST['txtus'] ;
