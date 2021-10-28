@@ -81,8 +81,8 @@
 
 <!-- Copyright -->
 <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-  © 2021 Design By:
-  <a class="text-white" href="https://mdbootstrap.com/">HoangAnh</a>
+  © 2021 Welcome to:
+  <a class="text-white" href="https://mdbootstrap.com/">Threefairies Shop</a>
 </div>
 <!-- Copyright -->
 </footer>

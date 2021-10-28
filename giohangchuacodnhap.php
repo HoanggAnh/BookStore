@@ -2,30 +2,24 @@
 ob_start();
 ?>
 <?php 
-	include "head.php"
+	include "header.php";
+	include "navh.php";
 	?>
-<?php
-$title ="Shop huy";
-$name ="Điện thoai";
-?>
-<?php 
-	include "top.php"
-    ?>
+
     <?php 
     session_start();
-	include "header.php"
+	include "navbar.php"
 	?>
-	<?php 
-	include "navigation.php"
-	?>
-	<!--//////////////////////////////////////////////////-->
-	<!--///////////////////Cart Page//////////////////////-->
-	<!--//////////////////////////////////////////////////-->
+
+
+	<!-- CART PAGE -->
+
+
 	<?php 
 	// if (is_countable($aa) && count($aa) > 0) :
 	if(is_countable($_SESSION['cart']) == 0)
 	{
-		header('Location: baogiohangtrong.php');
+		header('Location: empty-cart.php');
 	}
 	?>
 	<div id="page-content" class="single-page">
@@ -67,7 +61,7 @@ $name ="Điện thoai";
 			</div>
 			<?php
 
-			require "inc/myconnect.php";
+			require "config.php";
 
 			if(isset($_SESSION['cart']))
 			{
@@ -100,7 +94,7 @@ $name ="Điện thoai";
 							<div class="name"><h3><a href="product.php?id=<?php  echo $s["ID"]?>"><?php  echo $s["Ten"]?></a></h3></div>
 							<div class="info">	
 								<ul>
-									<li>Nhà xuất bản: <?php  echo $s["Tennhasx"]?></li>
+									<li>Publishing House: <?php  echo $s["Tennhasx"]?></li>
 								</ul>
 							</div>
 							<?php
@@ -120,7 +114,7 @@ $name ="Điện thoai";
 								}
 								?>
 
-							<label>Số lượng: </label> 
+							<label>Quantity: </label> 
 							<input class="form-inline quantity" style="margin-right: 80px;width:50px" min="1" max ="99" type="number" name ="qty[<?php echo $s["ID"] ?>]" value="<?php echo $_SESSION['cart'][$s["ID"]]?>"> 
 						     <div>
 							
@@ -130,7 +124,7 @@ $name ="Điện thoai";
                                  if($s["KhuyenMai"] == true)
 								 {                                      
 								?>
-									<label style="color:red">Thành tiền: <?php ;
+									<label style="color:red">Total: <?php ;
 							    echo  $_SESSION['cart'][$s["ID"]] * $s["giakhuyenmai"]?>.000  </label> 
 								<?php 
 								}
@@ -139,7 +133,7 @@ $name ="Điện thoai";
                                  if($s["KhuyenMai"] == false)
 								 {
 								?>
-									<label style="color:red">Thành tiền: <?php ;
+									<label style="color:red">Total: <?php ;
 							    echo  $_SESSION['cart'][$s["ID"]] * $s["Gia"]?>.000  </label> 
 								<?php 
 								}
@@ -179,8 +173,8 @@ $name ="Điện thoai";
 			<div class="row">
 				<div class="col-md-4 col-md-offset-8 ">
                 
-					<center><p style="color:red"><i class="fa fa-exclamation" aria-hidden="true"> Bạn cần đăng nhập để đặt hàng</i></p>
-                    <a href="index.php" class="btn btn-1" style="margin-left:-76px">Chọn những sách khác</a></center>
+					<center><p style="color:red"><i class="fa fa-exclamation" aria-hidden="true"> You must Log In to order!</i></p>
+                    <a href="index.php" class="btn btn-1" style="margin-left:-76px">Choose another books</a></center>
 				</div>
 			<div class="row">
 				<div class="pricedetails">
@@ -188,11 +182,11 @@ $name ="Điện thoai";
 						<table style="margin-right:31px">
 							<h6>Price Details</h6>
 							<tr>
-								<td>Số lượng sách </td>
+								<td>Quantity Books </td>
 								<td><?php echo $sl ?></td>
 							</tr>
 							<tr style="border-top: 1px solid #333">
-								<td><h5>Tổng cộng</h5></td>
+								<td><h5>Total</h5></td>
 								<td><?php echo $total ?>.000</td>
 							</tr>
 						</table>
