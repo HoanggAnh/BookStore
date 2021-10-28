@@ -62,12 +62,17 @@
       
       <ul class="navbar-nav ms-auto d-flex flex-row mt-3 mt-lg-0">
          <!-- Search form -->
-      <form class="d-flex input-group w-auto ms-lg-3 my-3 my-lg-0">
+      <!-- <form class="d-flex input-group w-auto ms-lg-3 my-3 my-lg-0">
         <input type="search" class="form-control" placeholder="Enter a book name..." aria-label="Search" />
         <button class="btn btn-outline-white" type="button" data-mdb-ripple-color="dark"><i class="fas fa-search"></i>
           Search
         </button>
-      </form>
+      </form> -->
+
+      <form class="form-search d-flex input-group w-auto ms-lg-3 my-3 my-lg-0" method="GET" action="search.php">  
+					<input type="text" style = "border:none !important; padding: 0" class="input-medium search-query" name="txttimkiem" placeholder="  Enter a book name..." required>  
+					<button type="submit" name="tk" class="btn btn-outline-white" data-mdb-ripple-color="dark" ><i class="fas fa-search"></i> Search</button>  
+				</form>
 
         <li class="nav-item text-center mx-2 mx-lg-1">
           <a class="nav-link" href="#!">
