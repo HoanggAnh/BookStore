@@ -2,10 +2,10 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 29, 2021 lúc 05:03 PM
--- Phiên bản máy phục vụ: 10.4.21-MariaDB
--- Phiên bản PHP: 8.0.10
+-- Host: 127.0.0.1
+-- Generation Time: Oct 29, 2021 at 07:08 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,13 +18,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Cơ sở dữ liệu: `ban_sach`
+-- Database: `ban_sach`
 --
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `chitiethoadon`
+-- Table structure for table `chitiethoadon`
 --
 
 CREATE TABLE `chitiethoadon` (
@@ -38,16 +38,38 @@ CREATE TABLE `chitiethoadon` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `chitiethoadon`
+-- Dumping data for table `chitiethoadon`
 --
 
 INSERT INTO `chitiethoadon` (`id_chi_tiet_hoadon`, `sodh`, `masp`, `soluong`, `dongia`, `thanhtien`, `madv`) VALUES
-(144, 127, 214, 1, 214, '214.00', '15');
+(144, 127, 214, 1, 214, '214.00', '15'),
+(145, 128, 213, 1, 320, '320.00', ''),
+(146, 129, 214, 1, 100, '100.00', '');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `hoadon`
+-- Table structure for table `dichvu`
+--
+
+CREATE TABLE `dichvu` (
+  `madv` bigint(20) NOT NULL,
+  `tendv` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
+  `gia` double NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Dumping data for table `dichvu`
+--
+
+INSERT INTO `dichvu` (`madv`, `tendv`, `gia`) VALUES
+(15, 'Bọc sách', 10),
+(16, 'Gói quà tặng', 20);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `hoadon`
 --
 
 CREATE TABLE `hoadon` (
@@ -62,16 +84,36 @@ CREATE TABLE `hoadon` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `hoadon`
+-- Dumping data for table `hoadon`
 --
 
 INSERT INTO `hoadon` (`sodh`, `emailkh`, `ngaygiao`, `tenkh`, `diachi`, `dienthoai`, `hinhthucthanhtoan`, `thanhtien`) VALUES
-(127, 'thanh@gmail.com', '2021-06-26', 'Thanh Truong', 'Hà Nội', '1234567890', 'ATM', '224.00');
+(127, 'thanh@gmail.com', '2021-06-26', 'Thanh Truong', 'Hà Nội', '1234567890', 'ATM', '224.00'),
+(128, 'hoanganh@gmail.com', '2021-10-29', 'Hoang Anh', 'heloo', '0852635623', 'ATM', '0.00'),
+(129, 'hoanganh@gmail.com', '2021-10-29', 'Hoang Anh', 'heloo', '0852635623', 'ATM', '0.00');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `loginuser`
+-- Table structure for table `loginadmin`
+--
+
+CREATE TABLE `loginadmin` (
+  `tendangnhap` varchar(100) NOT NULL,
+  `matkhau` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `loginadmin`
+--
+
+INSERT INTO `loginadmin` (`tendangnhap`, `matkhau`) VALUES
+('admin', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `loginuser`
 --
 
 CREATE TABLE `loginuser` (
@@ -82,18 +124,20 @@ CREATE TABLE `loginuser` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `loginuser`
+-- Dumping data for table `loginuser`
 --
 
 INSERT INTO `loginuser` (`email`, `matkhau`, `HoTen`, `DienThoai`) VALUES
+('abc@gmail.com', 123, 'abc', '136888999'),
 ('chamanh@gmail.com', 123, 'Cham Anh', '0833454666'),
+('ha@gmail.com', 123, 'ha', '122335848'),
 ('hoanganh@gmail.com', 123, 'Hoang Anh', '0852635623'),
 ('kimanh@gmail.com', 123, 'Kim Anh', '0934237266');
 
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `nhaxuatban`
+-- Table structure for table `nhaxuatban`
 --
 
 CREATE TABLE `nhaxuatban` (
@@ -102,7 +146,7 @@ CREATE TABLE `nhaxuatban` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `nhaxuatban`
+-- Dumping data for table `nhaxuatban`
 --
 
 INSERT INTO `nhaxuatban` (`ID`, `Ten`) VALUES
@@ -114,7 +158,7 @@ INSERT INTO `nhaxuatban` (`ID`, `Ten`) VALUES
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `sanpham`
+-- Table structure for table `sanpham`
 --
 
 CREATE TABLE `sanpham` (
@@ -131,7 +175,7 @@ CREATE TABLE `sanpham` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
--- Đang đổ dữ liệu cho bảng `sanpham`
+-- Dumping data for table `sanpham`
 --
 
 INSERT INTO `sanpham` (`ID`, `Ten`, `Gia`, `HinhAnh`, `Manhasx`, `Mota`, `date`, `KhuyenMai`, `giakhuyenmai`, `tacgia`) VALUES
@@ -145,36 +189,48 @@ INSERT INTO `sanpham` (`ID`, `Ten`, `Gia`, `HinhAnh`, `Manhasx`, `Mota`, `date`,
 (435, 'Die Zauberhaften Drei', 399, 'book4.jpg', 16, '<p>Der Bär Hoggs wäre gerne mutig. Aber er fürchtet sich vor Spinnen und Gespenstern. Da beschließen Hoggs und sein bester Freund, das Stinktier Poki, das mit dem Abenteuer mal ein bisschen zu üben - und zwar gleich hinter der Bienenwiese beim verlassenen Hexenhaus. Huh, da spukt es doch! Tatsächlich blubbert es dort ganz unheimlich aus einem Kessel …\r\n\r\n„Ist da jemand?“, fragt Hoggs vorsichtig. Ja! Das Kaninchen Fips braucht dringend Hilfe. Und - schwups! -  stecken die Freunde mitten in einem turbulenten Zauberabenteuer …\r\n\r\nEine warmherzige Geschichte über das Mutigsein - mit drei liebenswerten, tierischen Helden. Zum Vorlesen für Jungen und Mädchen. \r\n\r\nEntdecke weitere Bilderbuchwelten von Stefanie Dahle:\r\nFrida, die kleine Waldhexe\r\nWassili Waschbär - Zum Glück hat man Freunde\r\nSo lieb hab ich nur dich!</p>\r\n', '2020-07-17', 1, 369, 'Gebundene Ausgabe');
 
 --
--- Chỉ mục cho các bảng đã đổ
+-- Indexes for dumped tables
 --
 
 --
--- Chỉ mục cho bảng `chitiethoadon`
+-- Indexes for table `chitiethoadon`
 --
 ALTER TABLE `chitiethoadon`
   ADD PRIMARY KEY (`id_chi_tiet_hoadon`),
   ADD KEY `chitiethoadon` (`sodh`);
 
 --
--- Chỉ mục cho bảng `hoadon`
+-- Indexes for table `dichvu`
+--
+ALTER TABLE `dichvu`
+  ADD PRIMARY KEY (`madv`);
+
+--
+-- Indexes for table `hoadon`
 --
 ALTER TABLE `hoadon`
   ADD PRIMARY KEY (`sodh`);
 
 --
--- Chỉ mục cho bảng `loginuser`
+-- Indexes for table `loginadmin`
+--
+ALTER TABLE `loginadmin`
+  ADD PRIMARY KEY (`tendangnhap`);
+
+--
+-- Indexes for table `loginuser`
 --
 ALTER TABLE `loginuser`
   ADD PRIMARY KEY (`email`);
 
 --
--- Chỉ mục cho bảng `nhaxuatban`
+-- Indexes for table `nhaxuatban`
 --
 ALTER TABLE `nhaxuatban`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Chỉ mục cho bảng `sanpham`
+-- Indexes for table `sanpham`
 --
 ALTER TABLE `sanpham`
   ADD PRIMARY KEY (`ID`),
@@ -188,45 +244,51 @@ ALTER TABLE `sanpham`
 ALTER TABLE `sanpham` ADD FULLTEXT KEY `Ten_2` (`Ten`);
 
 --
--- AUTO_INCREMENT cho các bảng đã đổ
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT cho bảng `chitiethoadon`
+-- AUTO_INCREMENT for table `chitiethoadon`
 --
 ALTER TABLE `chitiethoadon`
-  MODIFY `id_chi_tiet_hoadon` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
+  MODIFY `id_chi_tiet_hoadon` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
 
 --
--- AUTO_INCREMENT cho bảng `hoadon`
+-- AUTO_INCREMENT for table `dichvu`
+--
+ALTER TABLE `dichvu`
+  MODIFY `madv` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `hoadon`
 --
 ALTER TABLE `hoadon`
-  MODIFY `sodh` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=128;
+  MODIFY `sodh` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
 
 --
--- AUTO_INCREMENT cho bảng `nhaxuatban`
+-- AUTO_INCREMENT for table `nhaxuatban`
 --
 ALTER TABLE `nhaxuatban`
   MODIFY `ID` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
--- AUTO_INCREMENT cho bảng `sanpham`
+-- AUTO_INCREMENT for table `sanpham`
 --
 ALTER TABLE `sanpham`
   MODIFY `ID` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=437;
 
 --
--- Các ràng buộc cho các bảng đã đổ
+-- Constraints for dumped tables
 --
 
 --
--- Các ràng buộc cho bảng `chitiethoadon`
+-- Constraints for table `chitiethoadon`
 --
 ALTER TABLE `chitiethoadon`
   ADD CONSTRAINT `chitiethoadon` FOREIGN KEY (`sodh`) REFERENCES `hoadon` (`sodh`) ON DELETE CASCADE;
 
 --
--- Các ràng buộc cho bảng `sanpham`
+-- Constraints for table `sanpham`
 --
 ALTER TABLE `sanpham`
   ADD CONSTRAINT `sanpham` FOREIGN KEY (`Manhasx`) REFERENCES `nhaxuatban` (`ID`) ON DELETE CASCADE;

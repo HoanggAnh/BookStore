@@ -5,24 +5,26 @@
     include "navbar.php";
 	?>
 	
+	<hr style=" border: 1.5px solid">
 	<div id="page-content" class="single-page">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<ul class="breadcrumb">
-						<li><a href="index.php">Home</a></li>
-						<li>Xác nhận đơn hàng</li>
+					<ul class="breadcrumb" style="background-color: #323741">
+						<li><a style="color:#fcc39b" href="index.php">Home</a></li>
+						<li style="color:#fcc39b">Confirm Order</li>
 					</ul>
 				</div>
 			</div>
 			<div class="row">
 				<div class="col-lg-10">
-					<div class="heading"><h1 style="color:blue;text-align:center">Thông tin đơn hàng của bạn đã được chúng tôi ghi nhận                   
-                    chúng tôi sẽ liên hệ với bạn trong thời gian sớm nhất
+					<div class="heading text-center"><h1 style="color:black">Your order information has been recorded by us we will contact you as soon as possible!
                     </h1></div>
                 </div>
-                <div class="col-lg-10" style="text-align:center">
-                <a href="index.php" class="btn btn-1">Quay về trang chủ</a>
+				<img style="max-width: 300px; margin-left:30%" src="https://i.pinimg.com/564x/02/84/ed/0284ed6be0d06215cdc45a6dce4b2b91.jpg" alt="">
+                <div class="col-lg-10 text-center">
+                <a style="margin-top: 50px;margin-bottom:50px" href="index.php" class="btn btn-1">Back To Home</a>
+				
 				</div>
 			</div>
 		</div>
