@@ -14,7 +14,7 @@
               <h5 class="text-uppercase mb-4">About Book Store</h5>
 
               <p>
-                Nhà sách online với rất nhiều đầu sách hấp dẫn cho bạn đọc lựa chọn.
+              Online bookstore with a lot of interesting books for readers to choose from.
               </p>
 
 
