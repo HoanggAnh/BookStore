@@ -82,7 +82,7 @@ ob_start();
 			?>
 
 			<div class="row">
-			<form name="form5" id="ff5" method="POST" action="removecart.php">
+			<form name="form5" id="ff5" method="POST" action="remove-cart.php">
 				<div class="product well">
 					<div class="col-md-3">
 						<div class="image">
@@ -173,7 +173,7 @@ ob_start();
 			?>
 				
 			<div class="row">
-			<a href="rmcart.php" class="btn btn-2" style="margin-bottom:31px">Clean the cart</a>
+			<a href="rm-cart.php" class="btn btn-2" style="margin-bottom:31px">Clean the cart</a>
 				<div class="col-md-4 col-md-offset-8 ">
 					<center><a href="index.php" class="btn btn-1" style="margin-left:-76px">Choose another books</a></center>
 				</div>

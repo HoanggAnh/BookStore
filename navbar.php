@@ -53,6 +53,8 @@
                     }
                   }
                   ?>
+                  </div>
+            </div>
                   <li class="nav-item text-center mx-2 mx-lg-1">
                     <a class="nav-link-c active" href="cart.php">
                       <div>

@@ -24,7 +24,7 @@ include "navbar.php";
 					<div class="col-md-12">
 						<div class="products">
 							<?php
-							require 'config.php';
+							require 'inc/config.php';
 							//lay san pham theo id
 							$manhasx = $_GET["manhasx"];
 							$result = mysqli_query($conn, 'select count(ID) as total from sanpham where Manhasx = ' . $manhasx);

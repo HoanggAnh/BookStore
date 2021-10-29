@@ -29,7 +29,7 @@
 		</div>
 		<div class="content">
 			<?php
-			require 'config.php';
+			require 'inc/config.php';
 			$query = "SELECT * from sanpham ORDER BY date DESC limit 4;";
 			$rs = $conn->query($query);
 			if ($rs->num_rows > 0) {
