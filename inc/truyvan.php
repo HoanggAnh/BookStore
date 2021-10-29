@@ -1,5 +1,5 @@
 <?php
-require 'myconnect.php';
+require 'config.php';
 //lay danh sach san pham khuyen mai
 $sql="SELECT * FROM sanpham  where khuyenmai = '1' ORDER BY Ten  limit 4 ";
 $result = $conn->query($sql);

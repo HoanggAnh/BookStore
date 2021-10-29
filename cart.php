@@ -5,31 +5,21 @@ ob_start();
  require "login.php";
       if(!isset($_SESSION['txtus'])) // If session is not set then redirect to Login Page
        {
-           header("Location:giohangchuacodnhap.php");  
+           header("Location:search-unavailable.php");  
        }
 
 ?>
 <?php 
-	include "header.php"
-	?>
-<?php
-$title ="Threefairy Shop ";
-$name ="Điện thoại";
-?>
-<?php 
-	include "navh.php"
-    ?>
-    <?php 
-	include "navbar.php"
+	include "header.php";
+	include "navh.php";
+	include "navbar.php";
 	?>
 	
-	<!--//////////////////////////////////////////////////-->
-	<!--///////////////////Cart Page//////////////////////-->
-	<!--//////////////////////////////////////////////////-->
+
 	<?php 
 	if(is_countable($_SESSION['cart']) == 0)
 	{
-		header('Location: baogiohangtrong.php');
+		header('Location: empty-cart.php');
 	}
 	?>
 	<div id="page-content" class="single-page">
@@ -71,7 +61,7 @@ $name ="Điện thoại";
 			</div>
 			<?php
 
-			require "config.php";
+			require "inc/config.php";
 
 			if(isset($_SESSION['cart']))
 			{
@@ -104,14 +94,14 @@ $name ="Điện thoại";
 							<div class="name"><h3><a href="product.php?id=<?php  echo $s["ID"]?>"><?php  echo $s["Ten"]?></a></h3></div>
 							<div class="info">	
 								<ul>
-									<li>Nhà xuất bản: <?php  echo $s["Tennhasx"]?></li>
+									<li>Publishing House: <?php  echo $s["Tennhasx"]?></li>
 								</ul>
 							</div>
 							<?php
                                  if($s["KhuyenMai"] == true)
 								 {                                      
 								?>
-								<div class="price"><?php  echo $s["giakhuyenmai"]?>.000 VNĐ</div>
+								<div class="price"><?php  echo $s["giakhuyenmai"]?>.000 VND</div>
 								<?php 
 								}
 								?>
@@ -119,7 +109,7 @@ $name ="Điện thoại";
                                  if($s["KhuyenMai"] == false)
 								 {
 								?>
-								<div class="price"><?php  echo $s["Gia"]?>.000 VNĐ</div>
+								<div class="price"><?php  echo $s["Gia"]?>.000 VND</div>
 								<?php 
 								}
 								?>

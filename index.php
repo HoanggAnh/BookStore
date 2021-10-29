@@ -2,8 +2,10 @@
 include 'header.php';
 include 'navh.php';
 include 'navbar.php';
-include 'config.php';
+include 'inc/config.php';
 ?>
+
+
 
      
 <!-- Carousel -->

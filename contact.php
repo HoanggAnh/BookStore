@@ -1,15 +1,7 @@
 <?php
-include "header.php"
-?>
-<?php
-$title = "Shop huy";
-$name = "Điện thoai";
-?>
-<?php
-include "navh.php"
-?>
-<?php
-include "navbar.php"
+include "header.php";
+include "navh.php";
+include "navbar.php";
 ?>
 <!-- Contact -->
 <div id="page-content" class="single-page">

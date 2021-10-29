@@ -61,7 +61,7 @@ ob_start();
 			</div>
 			<?php
 
-			require "config.php";
+			require "inc/config.php";
 
 			if(isset($_SESSION['cart']))
 			{
@@ -101,7 +101,7 @@ ob_start();
                                  if($s["KhuyenMai"] == true)
 								 {                                      
 								?>
-								<div class="price"><?php  echo $s["giakhuyenmai"]?>.000 VNĐ</div>
+								<div class="price"><?php  echo $s["giakhuyenmai"]?>.000 VND</div>
 								<?php 
 								}
 								?>
@@ -109,7 +109,7 @@ ob_start();
                                  if($s["KhuyenMai"] == false)
 								 {
 								?>
-								<div class="price"><?php  echo $s["Gia"]?>.000 VNĐ</div>
+								<div class="price"><?php  echo $s["Gia"]?>.000 VND</div>
 								<?php 
 								}
 								?>

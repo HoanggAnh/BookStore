@@ -7,13 +7,7 @@ session_start();
 
 
 <?php 
-	include "header.php"
-	?>
-<?php
-$title ="Threefairy Shop";
-$name ="Điện thoai";
-?>
-<?php 
+	include "header.php";
 	include "navh.php";
     include "navbar.php";
     ?>
@@ -29,7 +23,7 @@ $mk = "" ;
 $kq = "";
 if(isset($_POST['submit']))
 {
-    require 'config.php';
+    require 'inc/config.php';
     $tk = $_POST['txtus'] ;
     $mk = $_POST['txtem'];
     $sql="SELECT * FROM loginuser  where email = '$tk'  and matkhau = '$mk'  ";

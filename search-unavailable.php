@@ -23,7 +23,7 @@
 						<div class="col-md-12">
 							<div class="products">
 							<?php
-							   require 'config.php';
+							   require 'inc/config.php';
 							   //lay san pham theo id
 							   $result = mysqli_query($conn, "select count(ID) as total from sanpham " );
 							   $row = mysqli_fetch_assoc($result);
