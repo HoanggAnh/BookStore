@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 29, 2021 lúc 04:51 PM
+-- Thời gian đã tạo: Th10 29, 2021 lúc 05:03 PM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 8.0.10
 
@@ -106,10 +106,10 @@ CREATE TABLE `nhaxuatban` (
 --
 
 INSERT INTO `nhaxuatban` (`ID`, `Ten`) VALUES
-(15, 'NXB ThomsonReuters'),
-(16, 'NXB Bertelsmann'),
-(17, 'NXB Wolters Kluwer'),
-(18, 'NXB Hachette Livre');
+(15, 'ThomsonReuters'),
+(16, 'Bertelsmann'),
+(17, 'Wolters Kluwer'),
+(18, 'Hachette Livre');
 
 -- --------------------------------------------------------
 
