@@ -15,20 +15,6 @@
               Home
             </a>
           </li>
-          <!-- <li class="nav-item dropdown text-center mx-2 mx-lg-1">
-          <a class="nav-link-c dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown"
-            aria-expanded="false">
-            <div>
-              <i class="fas fa-book fa-lg mb-1"></i>
-            </div>
-            Publishing House
-          </a>
-          <ul class="dropdown-menu active" aria-labelledby="navbarDropdownMenuLink">
-            <li><a class="dropdown-item" href="#">NXB Trẻ T</a></li>
-            <li><a class="dropdown-item" href="#">NXB Tổng hợp HCM</a></li>
-            <li><a class="dropdown-item" href="#">NXB Thế Giới</a></li>
-          </ul>
-        </li> -->
           <li class="nav-item dropdown text-center mx-2 mx-lg-1"><a href="#" class="nav-link-c dropdown-toggle" data-toggle="dropdown">
             <div>
               <i class="fas fa-book fa-lg mb-1"></i>
@@ -37,7 +23,7 @@
           </a>
             <div class="dropdown-menu">
               <div class="dropdown-inner">
-                <ul class="list-unstyled">
+                <ul>
                   <?php
                   //lay id nha san xuat
                   require 'inc/config.php';
@@ -84,17 +70,9 @@
               <!-- Right links -->
 
               <ul class="navbar-nav ms-auto d-flex flex-row mt-3 mt-lg-0">
-                <!-- Search form -->
-                <!-- <form class="d-flex input-group w-auto ms-lg-3 my-3 my-lg-0">
-        <input type="search" class="form-control" placeholder="Enter a book name..." aria-label="Search" />
-        <button class="btn btn-outline-white" type="button" data-mdb-ripple-color="dark"><i class="fas fa-search"></i>
-          Search
-        </button>
-      </form> -->
-
                 <form class="form-search d-flex input-group w-auto ms-lg-3 my-3 my-lg-0" method="GET" action="search.php">
                   <input type="text" style="border:none !important; padding: 0" class="input-medium search-query" name="txttimkiem" placeholder="  Enter a book name..." required>
-                  <button type="submit" name="tk" class="btn btn-outline-white" data-mdb-ripple-color="dark"><i class="fas fa-search"></i> Search</button>
+                  <button style="height:50px" type="submit" name="tk" class="btn btn-outline-white" data-mdb-ripple-color="dark"><i class="fas fa-search"></i> Search</button>
                 </form>
 
                 <li class="nav-item text-center mx-2 mx-lg-1">

@@ -55,7 +55,7 @@ $repass ="";
 
 if(isset($_POST['dangky']))
 {
-    require 'config.php';
+    require 'inc/config.php';
     $name  = $_POST['fullname'] ;
     $email = $_POST['email'];
     $dt = $_POST['phone'];

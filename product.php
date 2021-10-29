@@ -7,6 +7,7 @@ include "navh.php";
 include "navbar.php"
 ?>
 
+<hr style=" border: 1.5px solid">
 <div id="page-content" class="single-page">
     <?php
     require 'inc/config.php';
@@ -35,8 +36,8 @@ include "navbar.php"
         <div class="row">
             <div class="col-lg-12">
                 <ul class="breadcrumb">
-                    <li><a href="index.php">Trang chủ</a></li>
-                    <li><a href="#">Sách</a></li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="#">Book</a></li>
                     <li><a href="#"><?php echo $row["Ten"] ?></a></li>
                 </ul>
             </div>
@@ -54,12 +55,12 @@ include "navbar.php"
                     <div class="col-md-6">
                         <div class="caption">
                             <div class="name">
-                                <h5><?php echo $row["Ten"] ?></h5>
+                                <h3 style="color:#f3906c"><?php echo $row["Ten"] ?></h3>
                             </div>
                             <div class="info">
                                 <ul>
-                                    <li>Tác giả: <b><?php echo $row["tacgia"] ?></b></li>
-                                    <li>Nhà xuất bản: <a href="/category.php?manhasx=<?php echo $row["Manhasx"] ?>"><?php echo $row["Tennhasx"] ?></a>
+                                    <li>Author: <b><?php echo $row["tacgia"] ?></b></li>
+                                    <li>Publishing House: <a href="/category.php?manhasx=<?php echo $row["Manhasx"] ?>"><?php echo $row["Tennhasx"] ?></a>
                                         <h3>
                                     </li>
                                 </ul>
@@ -67,14 +68,14 @@ include "navbar.php"
                             <?php
                             if ($row["KhuyenMai"] == true) {
                             ?>
-                                <div class="price"><?php echo $row["giakhuyenmai"] ?>.000 VNĐ<span><?php echo $row["Gia"] ?>.000 VNĐ</span></div>
+                                <div class="price" style="color: red; font-size: 2rem"><span style="font-size: 14px; color: grey"><?php echo $row["Gia"] ?>,000₫ <i class="fas fa-arrow-right"></i></span><?php echo $row["giakhuyenmai"] ?>,000₫ </div>
                             <?php
                             }
                             ?>
                             <?php
                             if ($row["KhuyenMai"] == false) {
                             ?>
-                                <p style="color:red">Không có khuyến mãi</p>
+                                <p style="color:red">Not For Sale</p>
                                 <div class="price"><?php echo $row["Gia"] ?>.000 VNĐ<span></span></div>
                             <?php
                             }
@@ -82,8 +83,8 @@ include "navbar.php"
 
                             <div class="well">
                                 <form name="form3" id="ff3" method="POST" action="">
-                                    <input type="submit" name="submit" id="add-to-cart" class="btn btn-2" value="Thêm vào giỏ hàng" />
-                                    <a href="#" class="btn btn-info" data-toggle="modal" data-target="#myModal">Mua ngay</a>
+                                    <input type="submit" name="submit" id="add-to-cart" class="btn btn-2" value="Add To Cart" />
+                                    <a href="#" class="btn btn-info" data-toggle="modal" data-target="#myModal">Buy Now</a>
                                     <input type="hidden" name="acction" value="them vao gio hang" />
                                     <input type="hidden" name="idsp" value="<?php echo $row["ID"] ?>" />
                                 </form>
@@ -98,7 +99,7 @@ include "navbar.php"
                                     <div class="modal-content">
                                         <div class="modal-header">
                                             <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                            <h4 class="modal-title" style="text-align: center">Thông tin khách hàng</h4>
+                                            <h4 class="modal-title" style="text-align: center">Profile</h4>
                                         </div>
                                         <div class="modal-body">
                                             <p>Chức năng mua ngay giúp bạn mua nhanh mà không cần đăng nhập hoặc đặt hàng với một thông tin khác với thông tin trên tài khoản. Tuy nhiên bạn chỉ có thể mua một loại sách trong một lần đặt hàng, bạn nên đăng nhập để không phải nhập lại thông tin cũng như mua nhiều loại sách cùng lúc.</p>
@@ -122,9 +123,9 @@ include "navbar.php"
                                                     <label><input type="date" class="form-control" placeholder="Ngày giao  :" name="date" id="datechoose" required></label>
                                                 </div>
                                                 <div class="form-group">
-                                                    <label> Hình thức thanh toán :<select class="selectpicker" name="hinhthuctt">
-                                                            <option value="ATM">Trả thẻ</option>
-                                                            <option value="Live">Trực tiếp</option>
+                                                    <label> Method of Payment:<select class="selectpicker" name="hinhthuctt">
+                                                            <option value="ATM">Card</option>
+                                                            <option value="Live">Cash</option>
                                                             </optgroup>
                                                         </select>
                                                         </lable>
@@ -132,7 +133,7 @@ include "navbar.php"
 
                                                 <input type="hidden" name="idsp" value="<?php echo $row["ID"] ?>" />
                                                 <input type="hidden" name="gia" value="<?php echo $row["Gia"] ?>" />
-                                                <button type="submit" name="muangay" class="btn btn-1">Đặt hàng</button>
+                                                <button type="submit" name="muangay" class="btn btn-1">Order</button>
                                             </form>
                                         </div>
                                         <div class="modal-footer">
@@ -149,11 +150,9 @@ include "navbar.php"
                     <div class="clear"></div>
                 </div>
                 <div class="product-desc">
-                    <ul class="nav nav-tabs">
-                        <li class="active"><a href="#description">Thông tin sách</a></li>
-                    </ul>
                     <div class="tab-content">
                         <div id="description" class="tab-pane fade in active">
+                            <h4 style="color:#f3906c">Book Content:</h4>
 
                             <div innerHTML>
                                 <p><?php echo $row["Mota"] ?></p>

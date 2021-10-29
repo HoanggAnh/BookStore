@@ -22,16 +22,12 @@ ob_start();
 		header('Location: empty-cart.php');
 	}
 	?>
+
+<hr style=" border: 1.5px solid">
 	<div id="page-content" class="single-page">
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-12">
-					<ul class="breadcrumb">
-						<li><a href="index.php">Home</a></li>
-						<li><a href="cart.php">Giỏ hàng</a></li>
-					</ul>
-				</div>
-			</div>
+				
 			<div class="cart">
 			<p><?php
 			$ok=1;
@@ -48,7 +44,7 @@ ob_start();
 			
 			 if($ok == 2)
 			 {
-				echo "Có ".count($_SESSION['cart']). " Books in cart ";
+				echo "<p style='font-size: 2rem'> Have ".count($_SESSION['cart']). " Books In Cart </p>";
 			 }
 			else
 			{
@@ -70,7 +66,7 @@ ob_start();
 					$item[]=$key;
 				}
 				// echo $item;
-				$str= implode(",",$value);
+				$str= implode(",",$item);
 			    $query = "SELECT s.ID,s.Ten,s.date,s.Gia,s.HinhAnh,s.KhuyenMai,s.giakhuyenmai,s.Mota, n.Ten as Tennhasx,s.Manhasx
 				from sanpham s 
 				LEFT JOIN nhaxuatban n on n.ID = s.Manhasx
@@ -83,10 +79,10 @@ ob_start();
 
 			<div class="row">
 			<form name="form5" id="ff5" method="POST" action="remove-cart.php">
-				<div class="product well">
+				<!-- <div class="product well"> -->
 					<div class="col-md-3">
 						<div class="image">
-							<img src="images/<?php  echo $s["HinhAnh"]?>" style="width:300px;height:300px" />
+							<img src="images/<?php  echo $s["HinhAnh"]?>" style="width:250px;height:250px; margin-top:20px; margin-bottom:20px" />
 						</div>
 					</div>
 					<div class="col-md-9">
@@ -114,14 +110,14 @@ ob_start();
 								}
 								?>
 
-							<label>Số lượng: </label> 
+							<label>Quantity: </label> 
 							<input class="form-inline quantity" style="margin-right: 80px;width:50px" min="1" max ="99" type="number" name ="qty[<?php echo $s["ID"] ?>]" value="<?php echo $_SESSION['cart'][$s["ID"]]?>"> 
 						     <div>
 								<input type="submit" name="update" style="margin-top:31px"  value="Update" class="btn btn-2" />
 							</div>
 							<hr>
-							<input type="submit" name="remove" value="Delete" class="btn btn-default pull-right" />	
-							<input type="hidden" name="idsprm" value="<?php echo $s["ID"] ?>" />
+							<input type="submit" name="remove" value="Delete" class="btn btn-default pull-right" style="margin-bottom:5px">	
+							<input type="hidden" name="idsprm" value="<?php echo $s["ID"] ?>" /> 
 							<?php
                                  if($s["KhuyenMai"] == true)
 								 {                                      
@@ -145,7 +141,7 @@ ob_start();
 					</div>
 
 					<div class="clear"></div>
-				</div>	
+				<!-- </div>	 -->
 			</form>
 			<?php
                                  if($s["KhuyenMai"] == true)
@@ -172,18 +168,18 @@ ob_start();
 			}
 			?>
 				
-			<div class="row">
+			<div class="row" style="margin-bottom:50px">
 			<a href="rm-cart.php" class="btn btn-2" style="margin-bottom:31px">Clean the cart</a>
 				<div class="col-md-4 col-md-offset-8 ">
 					<center><a href="index.php" class="btn btn-1" style="margin-left:-76px">Choose another books</a></center>
 				</div>
 			<div class="row">
 				<div class="pricedetails">
-					<div class="col-md-4 col-md-offset-8" >
+					<div class="col-md-4 col-md-offset-8">
 						<table style="margin-right:31px">
-							<h6>Price Details</h6>
+							<h5>Price Details</h5>
 							<tr>
-								<td>Number of books </td>
+								<td>Type of Books: </td>
 								<td><?php echo $sl ?></td>
 							</tr>
 							<tr style="border-top: 1px solid #333">

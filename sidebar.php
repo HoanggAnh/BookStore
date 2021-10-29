@@ -1,7 +1,7 @@
 <div id="sidebar" class="col-md-4">
 	<div class="widget wid-categories">
 		<div class="heading">
-			<h4>Publishing House</h4>
+			<h3>Publishing House</h3>
 		</div>
 		<div class="content">
 			<ul>
@@ -23,9 +23,10 @@
 			</ul>
 		</div>
 	</div>
+	<hr style=" border: 1px solid black">
 	<div class="widget wid-product">
 		<div class="heading">
-			<h4>Lastest Books</h4>
+			<h3>Lastest Books</h3>
 		</div>
 		<div class="content">
 			<?php
