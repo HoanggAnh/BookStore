@@ -1,15 +1,9 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$db="ban_sach";
-
-// Create connection
-$conn = mysqli_connect($servername, $username, $password,$db);
-
+$conn=mysqli_connect("localhost","root","","ban_sach");
 // Check connection
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
-
+if ($conn->connect_error)
+  {
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
+  }
+  $conn->set_charset("utf8")
 ?>

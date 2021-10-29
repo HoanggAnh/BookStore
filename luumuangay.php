@@ -1,6 +1,6 @@
 
 <?php 
-require "inc/myconnect.php";
+require "inc/config.php";
 if(isset($_POST['muangay']))
 			{
 				// echo $item;
