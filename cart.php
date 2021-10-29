@@ -70,7 +70,7 @@ ob_start();
 					$item[]=$key;
 				}
 				// echo $item;
-				$str= implode(",",$item);
+				$str= implode(",",$value);
 			    $query = "SELECT s.ID,s.Ten,s.date,s.Gia,s.HinhAnh,s.KhuyenMai,s.giakhuyenmai,s.Mota, n.Ten as Tennhasx,s.Manhasx
 				from sanpham s 
 				LEFT JOIN nhaxuatban n on n.ID = s.Manhasx

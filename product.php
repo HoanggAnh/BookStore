@@ -27,7 +27,7 @@ include "navbar.php"
             $sl = 1;
         }
         $_SESSION['cart'][$idsp] = $sl;
-        echo "<script>window.location.replace('http://host2.org/cart.php'); </script>";
+        header:("location: cart.php");
     }
 
     ?>

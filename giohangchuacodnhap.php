@@ -82,7 +82,7 @@ ob_start();
 			?>
 
 			<div class="row">
-			<form name="form5" id="ff5" method="POST" action="removecart.php">
+			<form name="form5" id="ff5" method="POST" action="remove-cart.php">
 				<div class="product well">
 					<div class="col-md-3">
 						<div class="image">

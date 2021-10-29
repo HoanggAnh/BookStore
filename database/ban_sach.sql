@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 27, 2021 lúc 06:09 AM
+-- Thời gian đã tạo: Th10 29, 2021 lúc 12:04 PM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 8.0.10
 
@@ -91,24 +91,6 @@ INSERT INTO `hoadon` (`sodh`, `emailkh`, `ngaygiao`, `tenkh`, `diachi`, `dientho
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `loginadmin`
---
-
-CREATE TABLE `loginadmin` (
-  `tendangnhap` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `matkhau` varchar(50) COLLATE utf8_unicode_ci NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Đang đổ dữ liệu cho bảng `loginadmin`
---
-
-INSERT INTO `loginadmin` (`tendangnhap`, `matkhau`) VALUES
-('admin', 'admin');
-
--- --------------------------------------------------------
-
---
 -- Cấu trúc bảng cho bảng `loginuser`
 --
 
@@ -178,7 +160,9 @@ INSERT INTO `sanpham` (`ID`, `Ten`, `Gia`, `HinhAnh`, `Manhasx`, `Mota`, `date`,
 (214, 'The Animals Of Farthing Wood', 145, 'book3.jpg', 16, '<p>A group of forest animals unite to help each other to safety in this classic tale of tolerance, cooperation, survival, and friendship. When bulldozers enter Farthing Wood, the animals must escape before their homes are destroyed. They promise to stick together and protect each other—but then they get caught in a fire and nearly drown crossing a river. Will their pact hold? Both heart-wrenching and heartwarming, this beloved story has been translated into 16 languages.</p>\r\n', '2007-07-01', 1, 100, 'Colin Dann'),
 (218, 'My Frirst Book About Allah', 207, 'book5.jpg', 15, '<p>This simple but beautiful book helps children understand who Allah is. It introduces some of His divine attributes: His Oneness, His infinite Power, Love and Mercy, and it ends with the promise He has made to those who believe in Him and make Him happy.\r\n\r\nIt is a book to be treasured by children, with large, colourful illustrations and carefully written text that children will understand and enjoy.</p>', '2020-07-07', 0, 0, 'Sara Khan'),
 (219, 'Here We Are', 368, 'book8.jpg', 18, '<p>Oliver Jeffers, arguably the most influential creator of picture books today, offers a rare personal look inside his own hopes and wishes for his child--and in doing so gifts children and parents everywhere with a gently sweet and humorous missive about our world and those who call it home.\r\n\r\nInsightfully sweet, with a gentle humor and poignancy, here is Oliver Jeffers\' user\'s guide to life on Earth. He created it specially for his son, yet with a universality that embraces all children and their parents. Be it a complex view of our planet\'s terrain (bumpy, sharp, wet), a deep look at our place in space (it’s big), or a guide to all of humanity (don’t be fooled, we are all people), Oliver\'s signature wit and humor combine with a value system of kindness and tolerance to create a must-have book for parents.</p>', '2021-06-26', 1, 299, 'Oliver Jeffers'),
-(435, 'Die Zauberhaften Drei', 138, 'book4.jpg', 16, '<p>Der Bär Hoggs wäre gerne mutig. Aber er fürchtet sich vor Spinnen und Gespenstern. Da beschließen Hoggs und sein bester Freund, das Stinktier Poki, das mit dem Abenteuer mal ein bisschen zu üben - und zwar gleich hinter der Bienenwiese beim verlassenen Hexenhaus. Huh, da spukt es doch! Tatsächlich blubbert es dort ganz unheimlich aus einem Kessel …\r\n\r\n„Ist da jemand?“, fragt Hoggs vorsichtig. Ja! Das Kaninchen Fips braucht dringend Hilfe. Und - schwups! -  stecken die Freunde mitten in einem turbulenten Zauberabenteuer …\r\n\r\nEine warmherzige Geschichte über das Mutigsein - mit drei liebenswerten, tierischen Helden. Zum Vorlesen für Jungen und Mädchen. \r\n\r\nEntdecke weitere Bilderbuchwelten von Stefanie Dahle:\r\nFrida, die kleine Waldhexe\r\nWassili Waschbär - Zum Glück hat man Freunde\r\nSo lieb hab ich nur dich!</p>\r\n', '2020-07-17', 1, 399, 'Gebundene Ausgabe');
+(312, 'The Secret Garden', 265, 'book7.jpg', 16, '<p>Celebrate an unforgettable classic with this paperback edition featuring the timeless art of Tasha Tudor. Just in time for the movie adaptation starring Colin Firth and Julie Walters!\r\n\r\nThis gorgeous paperback includes Tasha Tudor’s iconic illustrations, an extended author biography, activities, and more, making it the perfect collector’s edition or a wonderful gift for young readers.\r\n\r\nWhen orphaned Mary Lennox comes to live at her uncle\'s great house on the Yorkshire Moors, she finds it full of secrets. The mansion has nearly one hundred rooms, and her uncle keeps himself locked up. And at night, she hears the sound of crying down one of the long corridors.\r\n\r\nThe gardens surrounding the large property are Mary\'s only escape. Then, Mary discovers a secret garden, surrounded by walls and locked with a missing key. With the help of two unexpected companions, Mary discovers a way in—and becomes determined to bring the garden back to life.</p>', '2019-09-11', 0, 229, 'Frances Hodgson Burnett '),
+(325, 'I Want A Dog: My Opinion Essay', 115, 'book6.png', 18, '<p>Hurrah for Essays! All English composition writing lessons should be this much fun.\r\n\r\n\r\n\r\nWhen cousins Dennis and Mellie decide to get a dog, they consider carefully what breed would be best for each family. For example, Dennis wants a big dog, but Mellie wants tiny. He has no other pets, but she has other pets that a dog must get along with. They consider different dog personalities, family situations, and personal preferences. Dennis writes an opinion essay for his teacher, Mrs. Shirky. But will his essay convince his parents to get the dog of his dreams?\r\n\r\n\r\n\r\nThis story takes a popular subject—kids getting a pet—and adds dogs of all sizes and shapes: all writing lessons should be this much fun. In the end, it’s cousins and the dogs that keep a reader turning the page. What kind of dog will Dennis choose? Will Mellie want the same kind of dog?\r\n</p>', '2020-10-21', 0, 0, 'Darcy Pattison'),
+(435, 'Die Zauberhaften Drei', 399, 'book4.jpg', 16, '<p>Der Bär Hoggs wäre gerne mutig. Aber er fürchtet sich vor Spinnen und Gespenstern. Da beschließen Hoggs und sein bester Freund, das Stinktier Poki, das mit dem Abenteuer mal ein bisschen zu üben - und zwar gleich hinter der Bienenwiese beim verlassenen Hexenhaus. Huh, da spukt es doch! Tatsächlich blubbert es dort ganz unheimlich aus einem Kessel …\r\n\r\n„Ist da jemand?“, fragt Hoggs vorsichtig. Ja! Das Kaninchen Fips braucht dringend Hilfe. Und - schwups! -  stecken die Freunde mitten in einem turbulenten Zauberabenteuer …\r\n\r\nEine warmherzige Geschichte über das Mutigsein - mit drei liebenswerten, tierischen Helden. Zum Vorlesen für Jungen und Mädchen. \r\n\r\nEntdecke weitere Bilderbuchwelten von Stefanie Dahle:\r\nFrida, die kleine Waldhexe\r\nWassili Waschbär - Zum Glück hat man Freunde\r\nSo lieb hab ich nur dich!</p>\r\n', '2020-07-17', 1, 369, 'Gebundene Ausgabe');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -202,12 +186,6 @@ ALTER TABLE `dichvu`
 --
 ALTER TABLE `hoadon`
   ADD PRIMARY KEY (`sodh`);
-
---
--- Chỉ mục cho bảng `loginadmin`
---
-ALTER TABLE `loginadmin`
-  ADD PRIMARY KEY (`tendangnhap`);
 
 --
 -- Chỉ mục cho bảng `loginuser`
@@ -267,7 +245,7 @@ ALTER TABLE `nhaxuatban`
 -- AUTO_INCREMENT cho bảng `sanpham`
 --
 ALTER TABLE `sanpham`
-  MODIFY `ID` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=436;
+  MODIFY `ID` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=437;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
