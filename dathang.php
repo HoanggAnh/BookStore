@@ -17,16 +17,16 @@ ob_start();
 	include "navbar.php";
 	?>
 	
-
+	<hr style=" border: 1.5px solid">
   <form name="form6" id="ff6" method="POST" action="<?php include 'luudonhang.php'?>">
 	<div id="page-content" class="single-page">
 
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<ul class="breadcrumb">
-						<li><a href="index.php">Trang chủ</a></li>
-						<li><a style="text-align:center">Xác nhận đơn hàng</a></li>
+					<ul class="breadcrumb" style="background-color: #323741">
+						<li><a style="color:#fcc39b"  href="index.php">Home</a></li>
+						<li><a style="text-align:center;color:#fcc39b">Confirm</a></li>
 					</ul>
 				</div>
 			</div>
@@ -35,19 +35,19 @@ ob_start();
 		
 			<div class="col-lg-6">
 				    <div class="panel panel-default">
-					<div class="panel-heading">Thông tin khách hàng</div>
+					<div class="panel-heading">Profile</div>
              <div class="panel-body">		 
 			 <div class="col-md-8" style="margin-left: 130px;">
-			 <label>Tên khách hàng : <?php echo  $_SESSION['HoTen']?></label>
-			 <label>Điện thoại: <?php echo  $_SESSION['dienthoai']?></label>
+			 <label>Name : <?php echo  $_SESSION['HoTen']?></label>
+			 <label>Mobile: <?php echo  $_SESSION['dienthoai']?></label>
 			 <label>Email:<?php echo    $_SESSION['email']?></label>     
-			 <label><input type="text"  class="form-control" placeholder="Nhập địa chỉ giao hàng   :" name="diachi"  required ></label>
+			 <label><input type="text"  class="form-control" placeholder="Enter your address   :" name="diachi"  required ></label>
 			 <br/>
 
-			<label><input type="date" class="form-control" placeholder="Ngày giao  :" name="date" id="datechoose"  required ></label>
-			<label> Hình thức thanh toán :<select class="selectpicker" name="hinhthuctt">
-    										<option value="ATM">Trả thẻ</option>
-    										<option value="Live">Trực tiếp</option>
+			<label><input type="date" class="form-control" placeholder="Delivery date  :" name="date" id="datechoose"  required ></label>
+			<label> Method of payment:<select class="selectpicker" name="hinhthuctt">
+    										<option value="ATM">Card</option>
+    										<option value="Live">Cash</option>
   											</optgroup>
 										</select>
 				</label>
@@ -57,35 +57,20 @@ ob_start();
 				   </div>		
 					 		 
 			</div>				
-			<label>Dịch vụ</label>
-                    <select class="form-control select2" multiple="multiple" name="dichvu" id="dichvu" onchange ="laygiatheoiddichvu(this.value)"  data-placeholder="Chọn dịch vụ" >
-										<?php
-													require "inc/config.php";
-                         $sql="SELECT * from dichvu ";
-                         $result = $conn->query($sql); 
-                         if ($result->num_rows > 0) {
-                          // xuat data cho moi dong
-                          while($row = $result->fetch_assoc()) {
-                      ?>
-                      <option value="<?php echo $row["madv"] ?>"><?php echo $row["tendv"] ?></option>
-											<?php
-													}
-												}
-											?>
-                    </select>						
+					
 		</div>        
 		<div class="col-lg-5">
 		<div class="panel panel-default">
-			<div class="panel-heading">Thông tin đơn hàng</div>
+			<div class="panel-heading">Order Information</div>
              <div class="panel-body">		 
 			 <div class="col-md-12">
 			 <div class="table-responsive">          
   <table class="table">
     <thead>
       <tr>
-        <th>Sách</th>
-        <th>Số lượng</th>
-        <th>Giá</th>
+        <th>Book:</th>
+        <th>Quantity:</th>
+        <th>Total:</th>
       </tr>
     </thead>
     <tbody>
@@ -156,7 +141,7 @@ ob_start();
   <table class="table">
     <thead>
       <tr>
-        <th>Thành tiền:</th>
+        <th>Total:</th>
 		<th></th>
 		<th></th>
 		<th></th>
@@ -186,7 +171,7 @@ ob_start();
 		</div> 
 					<div class="row">
 			<div class="panel panel-default">	
-			<div class="panel-heading">Sách (<?php  echo count($_SESSION['cart'])?>)</div>
+			<div class="panel-heading">Book (<?php  echo count($_SESSION['cart'])?>)</div>
              <div class="panel-body">		
 			 <?php
 
@@ -212,7 +197,7 @@ ob_start();
 				<div class="product well">
 					<div class="col-md-3">
 						<div class="image">
-							<img src="images/<?php  echo $s["HinhAnh"]?>" style="width:300px;height:300px" />
+							<img src="images/<?php  echo $s["HinhAnh"]?>" style="width:200px;height:200px; padding:10px"/>
 						</div>
 					</div>
 					<div class="col-md-9">
@@ -220,7 +205,7 @@ ob_start();
 							<div class="name"><h3><a href="product.php?id=<?php  echo $s["ID"]?>"><?php  echo $s["Ten"]?></a></h3></div>
 							<div class="info">	
 								<ul>
-									<li>Nhà xuất bản: <?php  echo $s["Tennhasx"]?></li>
+									<li>Publishing House: <?php  echo $s["Tennhasx"]?></li>
 								</ul>
 							</div>
 							<?php
@@ -277,7 +262,7 @@ ob_start();
 			</div>
 			</div>
 			</div>	
-							<input type="submit" name="Dat" value="Đặt hàng" class="btn btn-1" />	
+							<input type="submit" name="Dat" value="Order" class="btn btn-1" />	
 			</div>
 	</div>	
     </form>		
