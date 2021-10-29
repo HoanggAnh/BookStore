@@ -34,11 +34,11 @@ include "navbar.php"
     ?>
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <ul class="breadcrumb">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="#">Book</a></li>
-                    <li><a href="#"><?php echo $row["Ten"] ?></a></li>
+            <div class="col-lg-12" >
+                <ul class="breadcrumb" style="background-color: #323741" >
+                    <li><a style="color:#fcc39b" href="index.php">Home</a></li>
+                    <li><a style="color:#fcc39b" href="#">Book</a></li>
+                    <li><a style="color:#fcc39b"  href="#"><?php echo $row["Ten"] ?></a></li>
                 </ul>
             </div>
         </div>
@@ -75,7 +75,7 @@ include "navbar.php"
                             <?php
                             if ($row["KhuyenMai"] == false) {
                             ?>
-                                <p style="color:red">Not For Sale</p>
+                                <p style="color:red">No Discount</p>
                                 <div class="price"><?php echo $row["Gia"] ?>.000 VNĐ<span></span></div>
                             <?php
                             }

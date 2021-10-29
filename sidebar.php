@@ -28,7 +28,7 @@
 		<div class="heading">
 			<h3>Lastest Books</h3>
 		</div>
-		<div class="content">
+		<div class="content" style = "margin-bottom: 50px ; padding-left: 35px" >
 			<?php
 			require 'inc/config.php';
 			$query = "SELECT * from sanpham ORDER BY date DESC limit 4;";

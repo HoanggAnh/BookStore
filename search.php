@@ -4,14 +4,14 @@
     include "navh.php";
 	include "navbar.php";
  ?>
-
+    <hr style=" border: 1.5px solid">
 	<div id="page-content" class="single-page">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<ul class="breadcrumb">
-					<li><a href="index.php">Home</a></li>
-					<li><a>Search Results</a></li>
+					<ul class="breadcrumb"  style="background-color: #323741">
+					<li><a href="index.php" style="color:#fcc39b">Home</a></li>
+					<li><a style="color:#fcc39b">Search Results</a></li>
 					</ul>
 				</div>
 			</div>
@@ -63,7 +63,7 @@
 								<div class="product">
 								<div class="image"><a href="product.php?id=<?php echo $row["ID"]?>"><img src="images/<?php echo $row["HinhAnh"]?>" style="width:300px;height:300px" /></a></div>
 								<div class="caption">
-									<div class="name"><h3><a href="product.php"><?php echo $row["Ten"]?></a></h3></div>
+									<div class="name"><h3><a style="color:#f3906c" href="product.php"><?php echo $row["Ten"]?></a></h3></div>
 									<div class="price"><?php echo $row["Gia"] ?>.000 VND</div>
 								</div>
 							</div>
