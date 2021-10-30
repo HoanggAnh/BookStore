@@ -4,7 +4,7 @@ $kq = "";
 if(isset($_POST['dnhapadmin']))
 {
 
-    require '../inc/config.php';
+    require 'inc/config.php';
     $tk = $_POST['txtdangnhap'];
     $mk = $_POST['txtmatkhau'];
     $sql="SELECT * FROM loginadmin  where tendangnhap = '$tk'  and matkhau = '$mk'  ";

@@ -1,46 +1,47 @@
-	
-
-	<header class="container" >
-		<div class="row">
-			<div class="col-md-4" style="margin-bottom:25px">
-				<<img src="images/logobook.png" alt="" class="img-fluid logo">
-			</div>
-			<div class="col-md-4">
-				<form class="form-search" method="GET" action="timkiem.php">  
-					<input type="text"  class="input-medium search-query" name="txttimkiem" required>  
-					<button type="submit" name="tk" class="btn"><span class="glyphicon glyphicon-search"></span></button>  
-				</form>
-			</div>
-			<div class="col-md-4">
-				<div id="cart"><a class="btn btn-1" href="cart.php"><span class="glyphicon glyphicon-shopping-cart" ></span>Giỏ hàng (<?php
-			$ok=1;
-			 if(isset($_SESSION['cart']))
-			 {
-				 foreach($_SESSION['cart'] as $key => $value)
-				 {
-					 if(isset($key))
-					 {
-						$ok=2;
-					 }
-				 }
-			 }
-			
-			 if($ok == 2)
-			 {
-				echo count($_SESSION['cart']);
-			 }
-			else
-			{
-				echo   "0";
-			}
-			
-			
-			?>)</a></div>
-			</div>
-		</div>
-	</header>
-	
-
-
-
-
+<?php
+ob_start();
+?>
+<header class="main-header">
+        <!-- Logo -->
+        <a href="index.php" class="logo">
+          <!-- mini logo for sidebar mini 50x50 pixels -->
+          <span class="logo-mini"><b>Nhà sách online</b>S</span>
+          <!-- logo for regular state and mobile devices -->
+          <span class="logo-lg"><b>Nhà sách online</b></span>
+        </a>
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top" role="navigation">
+          <!-- Sidebar toggle button-->
+          <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+            <span class="sr-only">Toggle navigation</span>
+          </a>
+          <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+              <!-- Messages: style can be found in dropdown.less-->
+           
+              <!-- Notifications: style can be found in dropdown.less -->
+         
+              <!-- Tasks: style can be found in dropdown.less -->
+          
+              <!-- User Account: style can be found in dropdown.less -->
+              <li class="dropdown user user-menu">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  <img src="../images/lgadmin.jpg" class="user-image" alt="User Image">
+                  <span class="hidden-xs">Tài khoản</span>
+                </a>
+                <ul class="dropdown-menu">
+                  <!-- User image -->
+                  <!-- Menu Body -->
+                  <!-- Menu Footer-->
+                  <li class="user-footer">
+                      <a href="dangxuat.php" class="btn btn-default btn-flat">Đăng xuất</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- Control Sidebar Toggle Button -->
+              
+            </ul>
+          </div>
+        </nav>
+      </header>
+      <?php ob_end_flush(); ?>

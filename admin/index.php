@@ -2,10 +2,10 @@
 ob_start();
 ?>
 <?php 
- include "../admin/header.php";
+ include "head.php";
 ?>
 <?php
- require "../admin/loginAdmin.php";
+ require "loginAdmin.php";
       if(!isset($_SESSION['tendangnhap'] )) // If session is not set then redirect to Login Page
        {
            header("Location:login.php");  
@@ -16,11 +16,11 @@ ob_start();
     <div class="wrapper">
 
     <?php 
- include "../admin/header.php";
+ include "Header.php";
 ?>
       <!-- Left side column. contains the logo and sidebar -->
       <?php 
- include "../admin/aside.php";
+ include "aside.php";
 ?>
 
       <!-- Content Wrapper. Contains page content -->
@@ -113,12 +113,12 @@ ob_start();
         </section><!-- /.content -->
       </div><!-- /.content-wrapper -->
       <?php 
- include "../admin/footer.php";
+ include "footer.php";
 ?>
 
       <!-- Control Sidebar -->
       <?php 
- include "../admin/ControlSidebar.php";
+ include "ControlSidebar.php";
 ?>
       <!-- Add the sidebar's background. This div must be placed
            immediately after the control sidebar -->
@@ -126,7 +126,7 @@ ob_start();
     </div><!-- ./wrapper -->
 
     <?php 
- include "../admin/script.php";
+ include "script.php";
 ?>
   </body>
 </html>
