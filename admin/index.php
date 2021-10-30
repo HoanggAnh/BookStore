@@ -5,11 +5,11 @@ ob_start();
  include "head.php";
 ?>
 <?php
-//  require "loginAdmin.php";
-//       if(!isset($_SESSION['tendangnhap'] )) // If session is not set then redirect to Login Page
-//        {
-//            header("Location:login.php");  
-//        }
+ require "loginAdmin.php";
+      if(!isset($_SESSION['tendangnhap'] )) // If session is not set then redirect to Login Page
+       {
+           header("Location:login.php");  
+       }
 
 ?>
   <body class="hold-transition skin-blue sidebar-mini">
