@@ -5,11 +5,11 @@ ob_start();
  include "head.php";
 ?>
 <?php
- require "loginAdmin.php";
-      if(!isset($_SESSION['tendangnhap'] )) // If session is not set then redirect to Login Page
-       {
-           header("Location:login.php");  
-       }
+//  require "loginAdmin.php";
+//       if(!isset($_SESSION['tendangnhap'] )) // If session is not set then redirect to Login Page
+//        {
+//            header("Location:login.php");  
+//        }
 
 ?>
   <body class="hold-transition skin-blue sidebar-mini">
@@ -67,19 +67,7 @@ ob_start();
                 <a href="qlynhasx.php" class="small-box-footer">xem danh Sách <i class="fa fa-arrow-circle-right"></i></a>
               </div>
             </div><!-- ./col -->
-              <div class="col-lg-3 col-xs-6">
-              <!-- small box -->
-              <div class="small-box bg-red">
-                <div class="inner">
-                <h3>Quản lý</h3>
-                  <p>Dịch vụ</p>
-                </div>
-                <div class="icon">
-                  <i class="fa fa-television"></i>
-                </div>
-                <a href="quanlydv.php" class="small-box-footer">Xem danh Sách <i class="fa fa-arrow-circle-right"></i></a>
-              </div>
-            </div><!-- ./col -->
+            
      
             <div class="col-lg-3 col-xs-6">
               <!-- small box -->
