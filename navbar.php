@@ -75,13 +75,43 @@
                   <button style="height:50px" type="submit" name="tk" class="btn btn-outline-white" data-mdb-ripple-color="dark"><i class="fas fa-search"></i> Search</button>
                 </form>
 
-                <li class="nav-item text-center mx-2 mx-lg-1">
+                <!-- <li class="nav-item text-center mx-2 mx-lg-1">
                   <a class="nav-link" href="#!">
                     <div>
                       <i class="fas fa-shopping-cart fa-lg mb-2"></i>
                       <span class="badge rounded-pill badge-notification bg-dark">10</span>
                     </div>
                   </a>
+                </li> -->
+
+                <div class="nav-item text-center mx-2 mx-lg-1">
+				<div id="cart"><a  href="cart.php"><i class="fas fa-shopping-cart fa-lg mb-2" style="margin-top: 15px"></i>(<?php
+			$ok=1;
+			 if(isset($_SESSION['cart']))
+			 {
+				 foreach($_SESSION['cart'] as $key => $value)
+				 {
+					 if(isset($key))
+					 {
+						$ok=2;
+					 }
+				 }
+			 }
+			
+			 if($ok == 2)
+			 {
+				echo count($_SESSION['cart']);
+			 }
+			else
+			{
+				echo   "0";
+			}
+			
+			
+			?>)</a></div>
+			</div>
+		</div>
+
               </ul>
               <!-- Right links -->
             </div>
