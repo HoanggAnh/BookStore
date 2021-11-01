@@ -1,13 +1,13 @@
-<aside class="main-sidebar">
+<aside class="main-sidebar" style="background-color: black">
         <!-- sidebar: style can be found in sidebar.less -->
-        <section class="sidebar">
+        <section class="sidebar" >
           <!-- Sidebar user panel -->
           <div class="user-panel">
             <div class="pull-left image">
-              <img src="../images/logobook.png" class="img-circle" alt="User Image">
+              <img src="../images/logo.png" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-              <p>Admin</p>
+              <p style=" font-size: 2rem">Admin</p>
               <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
           </div>
@@ -27,7 +27,6 @@
               <ul class="treeview-menu">
                 <li><a href="qlysanpham.php"><i class="fa fa-circle-o"></i> Quản lý Sách</a></li>
                 <li><a href="qlynhasx.php"><i class="fa fa-circle-o"></i> Quản lý Nhà xuất bản</a></li>
-                <li><a href="quanlydv.php"><i class="fa fa-circle-o"></i> Quản lý dịch vụ</a></li>
               </ul>
             </li>
             <li class="treeview">

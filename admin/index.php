@@ -12,8 +12,8 @@ ob_start();
        }
 
 ?>
-  <body class="hold-transition skin-blue sidebar-mini">
-    <div class="wrapper">
+  <body class="hold-transition skin-blue sidebar-mini" >
+    <div class="wrapper" >
 
     <?php 
  include "Header.php";
@@ -24,16 +24,16 @@ ob_start();
 ?>
 
       <!-- Content Wrapper. Contains page content -->
-      <div class="content-wrapper">
+      <div class="content-wrapper" style="min-height: 901px; background-color: #1a2226">
         <!-- Content Header (Page header) -->
         <section class="content-header">
-          <h1>
+          <h1 style="color: #f3906c">
            Trang quản trị
-            <small>Admin</small>
+            <small style="color: #fcc39b">Admin</small>
           </h1>
           <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Trang quản trị</li>
+            <li><a href="#" style="color: #fcc39b"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li class="active" style="color: #fcc39b">Trang quản trị</li>
           </ol>
         </section>
 
@@ -117,5 +117,6 @@ ob_start();
  include "script.php";
 ?>
   </body>
+ 
 </html>
 <?php ob_end_flush(); ?>

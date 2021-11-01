@@ -3,14 +3,14 @@ ob_start();
 ?>
 <header class="main-header" >
         <!-- Logo -->
-        <a href="index.php" class="logo" style="background-color: tomato" >
+        <a href="index.php" class="logo" style="background-color: black" >
           <!-- mini logo for sidebar mini 50x50 pixels -->
           <span class="logo-mini "><b>ThreeFaries</b>S</span>
           <!-- logo for regular state and mobile devices -->
-          <span class="logo-lg" style="color: #fff !important"><b>ThreeFaries</b></span>
+          <span class="logo-lg" style="color: #f3906c !important"><b>ThreeFaries</b></span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
-        <nav class="navbar navbar-static-top" style="background-color: white" role="navigation">
+        <nav class="navbar navbar-static-top" style="background-color: black" role="navigation">
           <!-- Sidebar toggle button-->
           <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
             <span class="sr-only">Toggle navigation</span>
@@ -27,14 +27,14 @@ ob_start();
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   <img src="../images/form1.jpg" class="user-image" alt="User Image">
-                  <span class="hidden-xs" style="color: tomato">Tài khoản</span>
+                  <span class="hidden-xs" style="color: #f3906c">Tài khoản</span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <!-- Menu Body -->
                   <!-- Menu Footer-->
                   <li class="user-footer">
-                      <a href="dangxuat.php" class="btn btn-default btn-flat">Đăng xuất</a>
+                      <a href="logout.php" class="btn btn-default btn-flat">Đăng xuất</a>
                   </li>
                 </ul>
               </li>

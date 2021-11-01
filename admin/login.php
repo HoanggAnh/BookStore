@@ -1,94 +1,105 @@
 <?php
 ob_start();
 ?>
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
+<head>	
+	<title>Login</title>
+	<script src="jQuery/jquery-3.1.1.min.js" type="text/javascript"></script>
 
-    <head>
+	<style>
 
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Đăng nhập trang quản trị</title>
+body{
+			background-color: black;
+		}
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,100,300,500">
-        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" href="assets/css/form-elements.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-
-        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-        <!--[if lt IE 9]>
-            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-        <![endif]-->
-
-        <!-- Favicon and touch icons -->
-        <link rel="shortcut icon" href="assets/ico/favicon.png">
-        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-        <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-
-    </head>
-
-    <body>
-
-        <!-- Top content -->
-        <div class="top-content">
-        	
-            <div class="inner-bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2 text">
-                            <h1><strong>Đăng nhập</strong>trang quản trị</h1>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-sm-6 col-sm-offset-3 form-box">
-                        	<div class="form-top">
-                        		<div class="form-top-left">
-                            		<p>Đăng nhập tài khoảng của người quản trị</p>
-                        		</div>
-                        		<div class="form-top-right">
-                        			<i class="fa fa-key"></i>
-                        		</div>
-                            </div>
-                            <div class="form-bottom">
-			                    <form role="form" action="<?php include "loginAdmin.php" ?>" method="post" class="login-form">
-			                    	<div class="form-group">
-			                    		<label class="sr-only" for="form-username" >Tàikhoản</label>
-			                        	<input type="text" name="txtdangnhap" placeholder="Tài khoản..." value="admin" class="form-username form-control" id="form-username" required>
-			                        </div>
-			                        <div class="form-group">
-			                        	<label class="sr-only" for="form-password">Mậtkhẩu</label>
-			                        	<input type="password" name="txtmatkhau" placeholder="Mật khẩu..." value="admin" class="form-password form-control" id="form-password" required>
-			                        </div>
-                                    <button type="submit" name="dnhapadmin"class="btn">Sign in!</button>
-                                    <p style="color:red"><?php echo  $kq ?></p>
-			                    </form>
-		                    </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
+		#box{
+			height: 2px;
+			width: 1px;
+			padding: 5px;
+			background-color: #fcc39b;
+			border-radius: 10px;
+			line-height:90px;
+			box-shadow: 0 0 15px #f3906c;
+		}
+		
+		#in{
+			width: 90%;
+			height: 50px;
+			border-radius: 10px;
+			padding: 8px;
+			border : 4px solid #f3906c;
+			background-color: #333333;
+			color: white;
+		}
+		#in:focus{
+			border:6px solid #00cccc;
+		}
+		#inBtn{
+			width: 90%;
+			height: 50px;
+			border-radius: 10px;
+			line-height:10px;
+			border : 4px solid #00cccc;
+			background-color: #333333;
+			color:white;
+			cursor: pointer;
+		}
+		#copy{
+			color: #00cccc;
+			text-align: center;
+			font-style: italic;
+		}
+		footer{
+			position:fixed;		    
+		    bottom:0px;
+		    left:0px;
+		    right:0px;
+		    margin-bottom:0px;
+		}
+		hr{
+			color: black;
+		}
+	</style>
 
 
-        <!-- Javascript -->
-        <script src="assets/js/jquery-1.11.1.min.js"></script>
-        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-        <script src="assets/js/jquery.backstretch.min.js"></script>
-        <script src="assets/js/scripts.js"></script>
-        
-        <!--[if lt IE 10]>
-            <script src="assets/js/placeholder.js"></script>
-        <![endif]-->
-
-    </body>
-
+</head>
+<body background="https://i.pinimg.com/originals/bc/3e/96/bc3e9619b024972d991057ad7ddedf37.jpg" style="background-repeat:no-repeat;background-size:cover;" >
+	<br>
+	<hr>
+	<h1 align="center" style="color:#f3906c">Đăng Nhập Trang Quản Trị</h2>
+	<hr>
+	<br>
+	<form action="<?php include "loginAdmin.php" ?>" method="post">
+		<center>
+			<!-- <div id="circle"> -->
+				<h2 id="blinking" style="color: lavender">Please Login Here</h2>
+				<div id="box">
+					<input type="text" name="txtdangnhap" id="in" placeholder="Username" style="margin-top: 50px"><br>
+					<input type="password" name="txtmatkhau" placeholder="Password" id="in" style="margin-top: 10px">
+					<button type="submit" name="dnhapadmin"class="btn" style="background-color: black; color: #fcc39b; margin-top: 50px">Login!</button>
+					<p style="color:red"><?php echo  $kq ?></p>
+				</div>
+			<!-- </div> -->
+		</center>
+	</form>
+	<br><br><br><br>
+	<script src="script.js"></script>
+	<!-- <hr>
+		<p id="footer">Misfar ©</p>
+	<hr> -->
+	<footer>
+		<hr>
+			<p id="copy" style="color: #f3906c; font-size: 2rem"><b>ThreeFairies Shop ©</b></p>
+		<hr>
+	</footer>
+</body>
 </html>
+
 <?php ob_end_flush(); ?>
