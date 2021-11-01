@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 29, 2021 at 07:08 PM
+-- Generation Time: Nov 01, 2021 at 03:32 AM
 -- Server version: 10.4.21-MariaDB
 -- PHP Version: 8.0.10
 
@@ -33,38 +33,15 @@ CREATE TABLE `chitiethoadon` (
   `masp` bigint(20) NOT NULL,
   `soluong` int(11) NOT NULL,
   `dongia` float NOT NULL,
-  `thanhtien` decimal(9,2) NOT NULL,
-  `madv` varchar(200) COLLATE utf8_unicode_ci NOT NULL
+  `thanhtien` decimal(9,2) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Dumping data for table `chitiethoadon`
 --
 
-INSERT INTO `chitiethoadon` (`id_chi_tiet_hoadon`, `sodh`, `masp`, `soluong`, `dongia`, `thanhtien`, `madv`) VALUES
-(144, 127, 214, 1, 214, '214.00', '15'),
-(145, 128, 213, 1, 320, '320.00', ''),
-(146, 129, 214, 1, 100, '100.00', '');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `dichvu`
---
-
-CREATE TABLE `dichvu` (
-  `madv` bigint(20) NOT NULL,
-  `tendv` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
-  `gia` double NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
---
--- Dumping data for table `dichvu`
---
-
-INSERT INTO `dichvu` (`madv`, `tendv`, `gia`) VALUES
-(15, 'Bọc sách', 10),
-(16, 'Gói quà tặng', 20);
+INSERT INTO `chitiethoadon` (`id_chi_tiet_hoadon`, `sodh`, `masp`, `soluong`, `dongia`, `thanhtien`) VALUES
+(147, 130, 219, 1, 299, '299.00');
 
 -- --------------------------------------------------------
 
@@ -88,9 +65,7 @@ CREATE TABLE `hoadon` (
 --
 
 INSERT INTO `hoadon` (`sodh`, `emailkh`, `ngaygiao`, `tenkh`, `diachi`, `dienthoai`, `hinhthucthanhtoan`, `thanhtien`) VALUES
-(127, 'thanh@gmail.com', '2021-06-26', 'Thanh Truong', 'Hà Nội', '1234567890', 'ATM', '224.00'),
-(128, 'hoanganh@gmail.com', '2021-10-29', 'Hoang Anh', 'heloo', '0852635623', 'ATM', '0.00'),
-(129, 'hoanganh@gmail.com', '2021-10-29', 'Hoang Anh', 'heloo', '0852635623', 'ATM', '0.00');
+(130, 'hoanganh@gmail.com', '2021-10-21', 'Hoang Anh', 'hà nội', '0852635623', 'Live', '0.00');
 
 -- --------------------------------------------------------
 
@@ -128,9 +103,7 @@ CREATE TABLE `loginuser` (
 --
 
 INSERT INTO `loginuser` (`email`, `matkhau`, `HoTen`, `DienThoai`) VALUES
-('abc@gmail.com', 123, 'abc', '136888999'),
 ('chamanh@gmail.com', 123, 'Cham Anh', '0833454666'),
-('ha@gmail.com', 123, 'ha', '122335848'),
 ('hoanganh@gmail.com', 123, 'Hoang Anh', '0852635623'),
 ('kimanh@gmail.com', 123, 'Kim Anh', '0934237266');
 
@@ -200,12 +173,6 @@ ALTER TABLE `chitiethoadon`
   ADD KEY `chitiethoadon` (`sodh`);
 
 --
--- Indexes for table `dichvu`
---
-ALTER TABLE `dichvu`
-  ADD PRIMARY KEY (`madv`);
-
---
 -- Indexes for table `hoadon`
 --
 ALTER TABLE `hoadon`
@@ -251,19 +218,13 @@ ALTER TABLE `sanpham` ADD FULLTEXT KEY `Ten_2` (`Ten`);
 -- AUTO_INCREMENT for table `chitiethoadon`
 --
 ALTER TABLE `chitiethoadon`
-  MODIFY `id_chi_tiet_hoadon` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
-
---
--- AUTO_INCREMENT for table `dichvu`
---
-ALTER TABLE `dichvu`
-  MODIFY `madv` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id_chi_tiet_hoadon` bigint(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=149;
 
 --
 -- AUTO_INCREMENT for table `hoadon`
 --
 ALTER TABLE `hoadon`
-  MODIFY `sodh` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
+  MODIFY `sodh` bigint(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=131;
 
 --
 -- AUTO_INCREMENT for table `nhaxuatban`
