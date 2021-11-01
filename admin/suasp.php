@@ -48,7 +48,7 @@ $row = $result->fetch_assoc();
                   <h3 class="box-title">Sửa Sách</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form class="form-horizontal"  method="POST" action="<?php include 'xulusuasp.php'?>" enctype="multipart/form-data">
+                <form class="form-horizontal"  method="POST" action="<?php include 'xulysuasp.php'?>" enctype="multipart/form-data">
                   <div class="box-body">
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">Tên</label>
@@ -83,7 +83,7 @@ $row = $result->fetch_assoc();
                     <select class="form-control select2" style="width: 100%;" name="manhasx">
                       <option selected="selected" value="<?php echo $row["Manhasx"] ?>"><?php echo $row["Tennhasx"] ?></option>
                       <?php
-                         require '../inc/myconnect.php';
+                         require '../inc/config.php';
                          $sqls="SELECT ID,Ten from nhaxuatban where ID !=".$row["Manhasx"] ;
                          $results = $conn->query($sqls); 
                          if ($results->num_rows > 0) {

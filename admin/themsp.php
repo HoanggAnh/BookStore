@@ -37,7 +37,7 @@ ob_start();
                   <h3 class="box-title">Thêm Sách</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form class="form-horizontal" method="POST" action="<?php include 'xulyluasp.php' ?>" enctype="multipart/form-data">
+                <form class="form-horizontal" method="POST" action="<?php include 'xulyluusp.php' ?>" enctype="multipart/form-data">
                   <div class="box-body">
                     <div class="form-group">
                       <label for="inputEmail3" class="col-sm-2 control-label">Tên</label>
@@ -63,7 +63,7 @@ ob_start();
                     <select class="form-control select2" style="width: 100%;" name="manhasx">
                     <option selected="selected" value="3">Chọn Nhà xuất bản</option>
                      <?php
-                         require '../inc/myconnect.php';
+                         require '../inc/config.php';
                          $sql="SELECT ID,Ten from nhaxuatban where ID != 3";
                          $result = $conn->query($sql); 
                          if ($result->num_rows > 0) {

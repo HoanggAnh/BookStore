@@ -38,7 +38,7 @@ include "aside.php";
                   <h3 class="box-title">Thêm Nhà xuất bản</h3>
                 </div><!-- /.box-header -->
                 <!-- form start -->
-                <form class="form-horizontal" method="POST" action="<?php include 'xulyluanhasx.php' ?>">
+                <form class="form-horizontal" method="POST" action="<?php include 'xulyluunhasx.php' ?>">
                   <div class="box-body">
                     <div class="form-group">
                       <label for="inputEmail3"  class="col-sm-2 control-label">Tên Nhà xuất bản</label>
