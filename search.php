@@ -55,13 +55,13 @@
 							   // Có limit và start rồi thì truy vấn CSDL lấy danh Sách tin tức
 							   $result = mysqli_query($conn, "SELECT * FROM sanpham where Ten like '%$tentimkiem%'  LIMIT $start, $limit " );
 	// output data of each row
-	while ($row = mysqli_fetch_assoc($result)){
+	                           while ($row = mysqli_fetch_assoc($result)){
 
 ?>
 
 								<div class="col-lg-4 col-md-4 col-xs-12">
 								<div class="product">
-								<div class="image"><a href="product.php?id=<?php echo $row["ID"]?>"><img src="images/<?php echo $row["HinhAnh"]?>" style="width:300px;height:300px" /></a></div>
+								<div class="image"><a href="product.php?id=<?php echo $row["ID"]?>"><img src="images/<?php echo $row["HinhAnh"]?>" style="width:200px;height:200px" /></a></div>
 								<div class="caption">
 									<div class="name"><h3><a style="color:#f3906c" href="product.php"><?php echo $row["Ten"]?></a></h3></div>
 									<div class="price"><?php echo $row["Gia"] ?>.000 VND</div>

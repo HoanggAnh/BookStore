@@ -216,52 +216,50 @@ include "navbar.php";
 										?>
 
 										<!-- <label>Số lượng: </label>  -->
-										<input class="form-inline quantity" type="hidden" name="qty[<?php echo $s["ID"] ?>]" value="<?php echo $_SESSION['cart'][$s["ID"]] ?>">
-										<hr>
-
-										<lable>Quantity :<?php echo $_SESSION['cart'][$s["ID"]] ?></lable>
-										<input type="hidden" name="idsprm" value="<?php echo $s["ID"] ?>" />
-										<?php
-										if ($s["KhuyenMai"] == true) {
-										?>
-											<input type="hidden" name="dongia" value="<?php echo $s["giakhuyenmai"] ?>" />
-										<?php
-										}
-										?>
-										<?php
-										if ($s["KhuyenMai"] == false) {
-										?>
-											<input type="hidden" name="dongia" value="<?php echo $s["Gia"] ?>" />
-										<?php
-										}
-										?>
-
-
-									</div>
-									<input style="margin-top:10px" type="submit" name="Dat" value="Order" class="btn btn-1" />
-								</div>
-
-								<div class="clear"></div>
+										<input class="form-inline quantity"  type="hidden" name ="qty[<?php echo $s["ID"] ?>]" value="<?php echo $_SESSION['cart'][$s["ID"]]?>"> 
+							<hr>
+					
+							<lable>Số lượng :<?php echo $_SESSION['cart'][$s["ID"]] ?></lable>
+							<input type="hidden" name="idsprm" value="<?php echo $s["ID"] ?>" />
+							<?php
+							if($s["KhuyenMai"] == true)
+								 {                                      
+								?>
+								<input type="hidden" name="dongia" value="<?php echo $s["giakhuyenmai"] ?>" />
+								<?php 
+								}
+								?>
+								<?php
+                if($s["KhuyenMai"] == false)
+								 {
+								?>
+								      <input type="hidden" name="dongia" value="<?php echo $s["Gia"] ?>" />
+								<?php 
+								}
+								?>
+         
+						</div>
 					</div>
 
-					<?php
-								$total += $_SESSION['cart'][$s["ID"]] * $s["Gia"] ?>
-			<?php
-							}
-						} ?>
+					<div class="clear"></div>
+				</div>	
 
-				</div>
+			<?php 
+				 $total +=$_SESSION['cart'][$s["ID"]] * $s["Gia"]?>
+				 	<?php 
+				}
+			}?>
 			</div>
-		</div>
-
-	</div>
-	</div>
-</form>
-<?php
-include "footer.php"
-?>
+			</div>
+			</div>	
+							<input type="submit" name="Dat" value="Đặt hàng" class="btn btn-1" style="margin-left: 50%; margin-bottom: 50px  " />	
+			</div>
+	</div>	
+    </form>		
+	<?php 
+	include "footer.php"
+	?>
 </body>
-
 </html>
 <!-- Lấy ngày hiện tại -->
 <script>
