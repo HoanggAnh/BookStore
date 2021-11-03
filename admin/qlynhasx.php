@@ -59,7 +59,7 @@
                         <td><?php echo $row["Ten"] ?></td>
                         <td><a class="btn btn-primary" href="suanhasx.php?id=<?php  echo $row["ID"]  ?>">
                         <i class="fa fa-edit fa-lg"<acronym title="Chỉnh sửa"></acronym></i></a>               
-                         <a class="btn btn-danger" onclick="return confirm('Bạn có thật sự muốn xóa không ?');" href="xoahasx.php?id=<?php  echo $row["ID"]  ?>">                   <i class="fa fa-trash-o fa-lg" <acronym title="Xóa">
+                         <a class="btn btn-danger" onclick="return confirm('Bạn có thật sự muốn xóa không ?');" href="xoanhasx.php?id=<?php  echo $row["ID"]  ?>">                   <i class="fa fa-trash-o fa-lg" <acronym title="Xóa">
                          </acronym></i></a></td>
                       </tr>  
                       <?php
