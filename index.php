@@ -17,13 +17,13 @@ include 'inc/config.php';
 	</div>
 	<div class="carousel-inner">
 		<div class="carousel-item active">
-			<img src="images/banner4.png" class="d-block w-100" alt="...">
+			<img src="images/pic1.png" class="d-block w-100" alt="...">
 		</div>
 		<div class="carousel-item">
-			<img src="images/banner5.png" class="d-block w-100" alt="...">
+			<img src="images/pic2.png" class="d-block w-100" alt="...">
 		</div>
 		<div class="carousel-item">
-			<img src="images/banner6.png" class="d-block w-100" alt="...">
+			<img src="images/pic3.png" class="d-block w-100" alt="...">
 		</div>
 	</div>
 	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">

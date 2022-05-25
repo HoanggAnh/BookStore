@@ -28,7 +28,7 @@ include "navbar.php";
 					<p class="text-center"><span class="glyphicon glyphicon-home"></span>Address: 175 Tay Son Street, Trung Liet Ward, Dong Da District, Ha Noi, Viet Nam.</p>
 					<p class="text-center"><span class="glyphicon glyphicon-earphone"></span> Hotline: (04) 35632211</p>
 					<p class="text-center"><span class="glyphicon glyphicon-earphone"></span> Fax: (04) 3563 3351</p>
-					<p class="text-center"><span class="glyphicon glyphicon-envelope"></span> Email: info.threefairies@gmail.com</p> <br>
+					<p class="text-center"><span class="glyphicon glyphicon-envelope"></span> Email: diamondbs@gmail.com</p> <br>
 				<iframe style="margin-bottom:50px;" src="https://map.coccoc.com/map/94100036419964" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 			</div>
 		</div>

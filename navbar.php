@@ -1,7 +1,7 @@
 <main style="background-color: #f7f7ff">
   <nav class="navbar navbar-expand-lg ">
     <div class="container-fluid">
-      <img src="images/logobook.png" alt="" class="img-fluid logo">
+      <img src="images/logoms.png" alt="" class="img-fluid logo">
      <!-- NAVBAR -->
       <!-- Collapsible wrapper -->
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -19,7 +19,7 @@
             <div>
               <i class="fas fa-book fa-lg mb-1"></i>
             </div>
-            Publishing House
+            Publisher
           </a>
             <div class="dropdown-menu">
               <div class="dropdown-inner">

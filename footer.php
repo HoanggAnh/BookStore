@@ -4,9 +4,9 @@
   <footer>
     <div class="container-fluid text-center p-3" style="background-color: rgb(50,55,65); color: #f3906c">
       <!-- Remove the container if you want to extend the Footer to full width. -->
-      <div class="container my-5">
+      <div class="container-fluid my-5">
         <!-- Grid container -->
-        <div class="container p-4">
+        <div class="container-fluid p-4">
           <!--Grid row-->
           <div class="row mt-4">
             <!--Grid column-->
@@ -40,7 +40,7 @@
                   <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">175 Tay Son street </span>
                 </li>
                 <li class="mb-3">
-                  <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">Email: info@example.com</span>
+                  <span class="fa-li"><i class="fas fa-envelope"></i></span><span class="ms-2">Email: diamondbs@gmail.com</span>
                 </li>
                 <li class="mb-3">
                   <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">Phone: (+84) 234 567 88</span>
@@ -81,8 +81,8 @@
 
         <!-- Copyright -->
         <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-          © 2021 Welcome to:
-          <a class="text-white" href="https://mdbootstrap.com/">Threefairies Shop</a>
+          © 2022 Welcome to:
+          <a class="text-white" href="https://mdbootstrap.com/">Diamonds Book Store</a>
         </div>
         <!-- Copyright -->
   </footer>
